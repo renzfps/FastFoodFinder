@@ -1,0 +1,168 @@
+:root {
+  --ink: #1b2524;
+  --muted: #697371;
+  --cream: #f7f7f2;
+  --mint: #d9f2e5;
+  --green: #1d5a4d;
+  --green-dark: #123f36;
+  --coral: #f47c62;
+  --line: #dde5df;
+  --white: #fff;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--cream); font-family: "DM Sans", sans-serif; }
+button, input { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+.container { width: min(1150px, calc(100% - 64px)); margin: 0 auto; }
+.site-header { position: absolute; z-index: 5; top: 0; left: 0; right: 0; }
+.nav-wrap { display: flex; height: 86px; align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--green-dark); font: 800 20px "Plus Jakarta Sans", sans-serif; letter-spacing: -.8px; }
+.brand-accent { color: var(--coral); }
+.brand-mark { display: flex; gap: 2px; align-items: flex-end; width: 24px; height: 22px; transform: skew(-8deg); }
+.brand-mark span { display: block; width: 6px; border-radius: 5px; background: var(--coral); }
+.brand-mark span:first-child { height: 12px; }
+.brand-mark span:nth-child(2) { height: 19px; background: #f8b35c; }
+.brand-mark span:last-child { height: 15px; background: var(--green); }
+.main-nav { display: flex; gap: 38px; margin-left: 116px; font-size: 13px; font-weight: 600; color: #78817e; }
+.main-nav a { position: relative; padding: 8px 0; }
+.main-nav a.active, .main-nav a:hover { color: var(--ink); }
+.main-nav a.active::after { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; content: ""; background: var(--coral); }
+.nav-action { display: flex; gap: 10px; align-items: center; color: var(--green); font-size: 13px; font-weight: 700; }
+.nav-action span { font-size: 19px; transition: transform .2s; }
+.nav-action:hover span, .restaurant-pill:hover span:last-child { transform: translateX(4px); }
+.nav-menu { display: none; border: 0; background: none; }
+
+.hero { position: relative; min-height: 692px; overflow: hidden; background: var(--mint); }
+.hero::before { position: absolute; width: 560px; height: 560px; top: 80px; right: -155px; border: 1px solid rgba(29, 90, 77, .11); border-radius: 50%; content: ""; }
+.hero::after { position: absolute; width: 770px; height: 770px; top: -26px; right: -260px; border: 1px solid rgba(29, 90, 77, .08); border-radius: 50%; content: ""; }
+.hero-glow { position: absolute; border-radius: 50%; filter: blur(3px); pointer-events: none; }
+.hero-glow-one { width: 340px; height: 340px; top: 110px; right: 180px; background: rgba(255,255,255,.25); }
+.hero-glow-two { width: 170px; height: 170px; top: 470px; left: -64px; background: rgba(247, 172, 102, .18); }
+.hero-grid { position: relative; z-index: 1; display: grid; min-height: 580px; grid-template-columns: 1fr 1fr; align-items: center; padding-top: 64px; }
+.hero-copy { padding-bottom: 13px; }
+.eyebrow { display: flex; align-items: center; gap: 9px; color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: 1.25px; text-transform: uppercase; }
+.eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--coral); }
+h1, h2, h3, p { margin-top: 0; }
+h1 { max-width: 550px; margin: 23px 0 21px; color: var(--green-dark); font: 800 clamp(46px, 5.1vw, 72px)/1.05 "Plus Jakarta Sans", sans-serif; letter-spacing: -3.8px; }
+h1 em { color: var(--coral); font-style: normal; }
+.hero-text { max-width: 445px; margin-bottom: 29px; color: #5e6f6a; font-size: 15px; line-height: 1.75; }
+.search-box { display: flex; align-items: center; max-width: 493px; padding: 6px 6px 6px 19px; background: var(--white); border: 1px solid rgba(29, 90, 77, .08); border-radius: 11px; box-shadow: 0 12px 25px rgba(41, 81, 67, .09); }
+.search-icon { color: var(--coral); font-size: 27px; line-height: 1; transform: rotate(-20deg); }
+.search-box input { min-width: 0; flex: 1; padding: 13px 10px; border: 0; outline: 0; color: var(--ink); font-size: 13px; }
+.search-box input::placeholder { color: #a0aaa6; }
+.search-box button { display: flex; gap: 14px; align-items: center; padding: 13px 17px; border: 0; border-radius: 7px; color: white; background: var(--green); cursor: pointer; font-size: 12px; font-weight: 700; }
+.search-box button span { font-size: 17px; transition: transform .2s; }
+.search-box button:hover span { transform: translateX(3px); }
+.quick-picks { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 16px; align-items: center; color: #788782; font-size: 11px; }
+.quick-picks button { padding: 0; border: 0; color: var(--green); background: none; cursor: pointer; font-size: 11px; font-weight: 700; text-decoration: underline; text-decoration-color: rgba(29,90,77,.28); text-underline-offset: 3px; }
+.hero-visual { position: relative; height: 490px; }
+.orbit { position: absolute; border: 1px solid rgba(29,90,77,.17); border-radius: 50%; transform: rotate(-27deg); }
+.orbit-large { width: 500px; height: 270px; top: 117px; left: 6px; }
+.orbit-small { width: 390px; height: 170px; top: 173px; left: 56px; border-color: rgba(244,124,98,.22); transform: rotate(28deg); }
+.meal-card { position: absolute; overflow: hidden; background: white; border-radius: 14px; box-shadow: 0 25px 50px rgba(35, 75, 63, .2); }
+.meal-card-main { top: 70px; left: 122px; width: 260px; transform: rotate(6deg); }
+.meal-photo { display: grid; height: 147px; place-items: center; background: #de9e55; }
+.taco-photo { background: linear-gradient(135deg, #e7bd78, #d87d47); }
+.meal-photo span { font-size: 76px; filter: drop-shadow(0 9px 4px rgba(74,39,22,.2)); transform: rotate(-8deg); }
+.meal-card-content { padding: 15px 19px 17px; }
+.card-kicker { color: var(--coral); font-size: 8px; font-weight: 800; letter-spacing: 1.3px; }
+.card-kicker span { margin-left: 3px; font-size: 11px; }
+.meal-card h3 { margin: 8px 0 2px; color: var(--green-dark); font: 700 18px/1.15 "Plus Jakarta Sans", sans-serif; letter-spacing: -.7px; }
+.meal-card p { margin-bottom: 15px; color: #89928f; font-size: 10px; }
+.nutrition-row { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #e8eeea; padding-top: 11px; }
+.nutrition-row div { display: flex; flex-direction: column; gap: 2px; }
+.nutrition-row strong { color: var(--green); font-size: 13px; }
+.nutrition-row small { color: #9da6a2; font-size: 8px; }
+.floating-tag { position: absolute; display: flex; align-items: center; gap: 7px; padding: 9px 13px; border-radius: 7px; background: white; box-shadow: 0 12px 30px rgba(35,75,63,.13); color: var(--green); font-size: 10px; font-weight: 700; }
+.floating-tag span { display: grid; width: 18px; height: 18px; place-items: center; border-radius: 50%; color: white; background: var(--coral); font-size: 11px; }
+.tag-protein { top: 55px; right: 4px; transform: rotate(-5deg); }
+.tag-calories { right: 28px; bottom: 82px; transform: rotate(4deg); }
+.tag-calories span { background: var(--green); }
+.decorative-leaf { position: absolute; color: var(--coral); font-size: 28px; }
+.leaf-one { top: 164px; left: 25px; transform: rotate(-22deg); }
+.leaf-two { right: 29px; top: 285px; color: #f8b35c; font-size: 24px; transform: rotate(24deg); }
+.trust-row { position: relative; z-index: 1; display: flex; gap: 30px; align-items: center; color: #7a9189; font-size: 9px; font-weight: 700; letter-spacing: .9px; }
+.trust-line { width: 42px; height: 1px; background: #a3bbb1; }
+.trust-stat { display: flex; gap: 6px; align-items: center; color: #7a9189; font-weight: 400; letter-spacing: 0; }
+.trust-stat strong { color: var(--green); font-weight: 700; }
+
+.feature-section { padding: 95px 0 106px; background: var(--cream); }
+.section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 50px; }
+.eyebrow.muted { color: #7e8a86; }
+h2 { margin: 17px 0 0; color: var(--green-dark); font: 800 39px/1.15 "Plus Jakarta Sans", sans-serif; letter-spacing: -2px; }
+h2 span { color: var(--coral); }
+.section-heading > p { max-width: 245px; margin-bottom: 5px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.feature-card { position: relative; min-height: 264px; padding: 27px 29px; border: 1px solid var(--line); border-radius: 11px; background: rgba(255,255,255,.38); }
+.feature-card.featured { border-color: transparent; background: var(--green); box-shadow: 0 17px 35px rgba(29,90,77,.18); }
+.feature-icon { display: grid; width: 39px; height: 39px; place-items: center; margin-bottom: 26px; border-radius: 50%; font-size: 22px; }
+.search-feature { color: var(--coral); background: #fde4dc; transform: rotate(-20deg); }
+.filter-feature { color: var(--green); background: #cae9da; }
+.compare-feature { color: #d69735; background: #f8e9b8; }
+.feature-number { position: absolute; top: 28px; right: 29px; color: #9ba8a3; font-size: 10px; font-weight: 700; }
+.featured .feature-number { color: #84b8a7; }
+.feature-card h3 { margin: 0 0 10px; color: var(--green-dark); font: 700 18px "Plus Jakarta Sans", sans-serif; letter-spacing: -.5px; }
+.featured h3 { color: white; }
+.feature-card p { max-width: 230px; margin-bottom: 21px; color: #74817c; font-size: 12px; line-height: 1.65; }
+.featured p { color: #b4d1c5; }
+.feature-card a { color: var(--green); font-size: 11px; font-weight: 700; }
+.featured a { color: #f8b798; }
+.feature-card a span { margin-left: 7px; font-size: 15px; }
+
+.restaurant-section { padding: 76px 0; color: white; background: var(--green-dark); }
+.restaurant-wrap { display: flex; align-items: center; justify-content: space-between; }
+.restaurant-section .eyebrow { color: #a8c3b8; }
+.restaurant-section h2 { color: white; }
+.restaurant-list { display: grid; width: 420px; grid-template-columns: 1fr 1fr; gap: 10px; }
+.restaurant-pill { display: flex; gap: 9px; align-items: center; padding: 13px 14px; border: 1px solid rgba(255,255,255,.14); border-radius: 7px; color: white; background: rgba(255,255,255,.06); cursor: pointer; font-size: 11px; font-weight: 600; text-align: left; transition: background .2s, transform .2s; }
+.restaurant-pill:hover { background: rgba(255,255,255,.14); transform: translateY(-2px); }
+.restaurant-pill span:last-child { margin-left: auto; color: #9eb9ae; font-size: 16px; transition: transform .2s; }
+.restaurant-logo { display: grid; width: 24px; height: 24px; place-items: center; border-radius: 7px; font: 800 13px "Plus Jakarta Sans", sans-serif; }
+.red-logo { color: white; background: #e5443c; }
+.green-logo { color: white; background: #5b9e6a; }
+.white-logo { color: var(--green); background: white; }
+.yellow-logo { color: #308d44; background: #f6dc47; }
+.toast { position: fixed; z-index: 10; right: 20px; bottom: 20px; max-width: 300px; padding: 14px 18px; border-radius: 8px; color: white; background: var(--green-dark); box-shadow: 0 10px 28px rgba(0,0,0,.2); font-size: 12px; opacity: 0; pointer-events: none; transform: translateY(15px); transition: opacity .25s, transform .25s; }
+.toast.show { opacity: 1; transform: translateY(0); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+@media (max-width: 800px) {
+  .container { width: min(100% - 40px, 560px); }
+  .main-nav, .nav-action { display: none; }
+  .nav-menu { display: flex; flex-direction: column; gap: 4px; padding: 8px 0 8px 8px; }
+  .nav-menu span { width: 21px; height: 2px; background: var(--green-dark); }
+  .hero { min-height: auto; }
+  .hero-grid { display: block; padding-top: 145px; }
+  h1 { font-size: clamp(42px, 12vw, 64px); letter-spacing: -2.6px; }
+  .hero-visual { height: 425px; margin-top: 18px; }
+  .meal-card-main { left: calc(50% - 130px); }
+  .orbit-large { left: calc(50% - 250px); }
+  .orbit-small { left: calc(50% - 195px); }
+  .tag-protein { right: 0; }
+  .tag-calories { right: 2px; }
+  .trust-row { flex-wrap: wrap; gap: 14px 20px; padding-bottom: 35px; }
+  .trust-line { display: none; }
+  .section-heading, .restaurant-wrap { display: block; }
+  .section-heading > p { margin-top: 20px; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .feature-card { min-height: 220px; }
+  .restaurant-list { width: 100%; margin-top: 35px; }
+}
+@media (max-width: 460px) {
+  .container { width: calc(100% - 32px); }
+  .brand { font-size: 17px; }
+  .hero-grid { padding-top: 128px; }
+  .search-box { padding-left: 12px; }
+  .search-box button { padding: 12px 12px; }
+  .quick-picks { gap: 9px; }
+  .hero-visual { height: 360px; transform: scale(.86); transform-origin: top center; margin-bottom: -45px; }
+  .trust-row { font-size: 8px; }
+  .trust-stat { width: 100%; }
+  .feature-section { padding: 70px 0 80px; }
+  h2 { font-size: 33px; }
+  .restaurant-section { padding: 60px 0; }
+  .restaurant-list { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FastFoodFinder helps you discover fast food choices that fit your nutrition goals."
+    />
+    <title>FastFoodFinder | Eat smart, even on the go</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#" aria-label="FastFoodFinder home">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span>FastFood<span class="brand-accent">Finder</span></span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="active" href="#discover">Discover</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#about">About</a>
+        </nav>
+        <button class="nav-menu" aria-label="Open navigation menu" type="button">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="nav-action" href="#discover">Find a meal <span aria-hidden="true">→</span></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="discover">
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-dot"></span> Better choices, made simple</div>
+            <h1>Find food that fits <em>your</em> goals.</h1>
+            <p class="hero-text">
+              Compare nutrition from your favorite fast food spots and find a meal you can feel good about — without the menu deep dive.
+            </p>
+            <form class="search-box" id="restaurant-search">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <label class="sr-only" for="search-input">Search for a restaurant or meal</label>
+              <input id="search-input" type="search" placeholder="Search a restaurant or meal..." autocomplete="off" />
+              <button type="submit">Search <span aria-hidden="true">→</span></button>
+            </form>
+            <div class="quick-picks">
+              <span>Popular:</span>
+              <button type="button" data-search="McDonald's">McDonald's</button>
+              <button type="button" data-search="Chipotle">Chipotle</button>
+              <button type="button" data-search="Chick-fil-A">Chick-fil-A</button>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="Nutrition comparison preview">
+            <div class="orbit orbit-large"></div>
+            <div class="orbit orbit-small"></div>
+            <div class="meal-card meal-card-main">
+              <div class="meal-photo taco-photo"><span>🍗</span></div>
+              <div class="meal-card-content">
+                <div class="card-kicker">SMART PICK <span>✦</span></div>
+                <h3>Grilled Chicken<br />Sandwich</h3>
+                <p>Chick-fil-A</p>
+                <div class="nutrition-row">
+                  <div><strong>390</strong><small>calories</small></div>
+                  <div><strong>38g</strong><small>protein</small></div>
+                  <div><strong>12g</strong><small>fat</small></div>
+                </div>
+              </div>
+            </div>
+            <div class="floating-tag tag-protein"><span>↗</span> High protein</div>
+            <div class="floating-tag tag-calories"><span>✓</span> Under 500 cal</div>
+            <div class="decorative-leaf leaf-one">✦</div>
+            <div class="decorative-leaf leaf-two">✧</div>
+          </div>
+        </div>
+        <div class="container trust-row">
+          <span>MAKING YOUR NEXT MEAL EASIER</span>
+          <div class="trust-line"></div>
+          <span class="trust-stat"><strong>2,400+</strong> menu items compared</span>
+          <span class="trust-stat"><strong>12</strong> restaurants and counting</span>
+        </div>
+      </section>
+
+      <section class="feature-section" id="how-it-works">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow muted"><span class="eyebrow-dot"></span> Your shortcut to smarter ordering</div>
+              <h2>Less scrolling.<br /><span>More choosing.</span></h2>
+            </div>
+            <p>Everything you need to make a confident choice, all in one place.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon search-feature">⌕</div>
+              <span class="feature-number">01</span>
+              <h3>Pick a place</h3>
+              <p>Search your go-to restaurant or explore somewhere new.</p>
+              <a href="#discover">Explore restaurants <span>→</span></a>
+            </article>
+            <article class="feature-card featured">
+              <div class="feature-icon filter-feature">⌘</div>
+              <span class="feature-number">02</span>
+              <h3>Set your filters</h3>
+              <p>Sort by calories, protein, fat, or whatever matters to you.</p>
+              <a href="#discover">See the filters <span>→</span></a>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon compare-feature">◫</div>
+              <span class="feature-number">03</span>
+              <h3>Find your fit</h3>
+              <p>Compare the details and order with a little more confidence.</p>
+              <a href="#discover">Start comparing <span>→</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="restaurant-section" id="about">
+        <div class="container restaurant-wrap">
+          <div>
+            <div class="eyebrow muted"><span class="eyebrow-dot"></span> Your favorites, organized</div>
+            <h2>Good food is<br /><span>still fast food.</span></h2>
+          </div>
+          <div class="restaurant-list">
+            <button class="restaurant-pill" data-search="McDonald's"><span class="restaurant-logo red-logo">M</span>McDonald's <span>→</span></button>
+            <button class="restaurant-pill" data-search="Chipotle"><span class="restaurant-logo green-logo">C</span>Chipotle <span>→</span></button>
+            <button class="restaurant-pill" data-search="Chick-fil-A"><span class="restaurant-logo white-logo">C</span>Chick-fil-A <span>→</span></button>
+            <button class="restaurant-pill" data-search="Subway"><span class="restaurant-logo yellow-logo">S</span>Subway <span>→</span></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
