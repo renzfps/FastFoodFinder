@@ -66,7 +66,7 @@ h1 em { color: var(--coral); font-style: normal; }
 .meal-card-main { top: 70px; left: 122px; width: 260px; transform: rotate(6deg); }
 .meal-photo { display: grid; height: 147px; place-items: center; background: #de9e55; }
 .taco-photo { background: linear-gradient(135deg, #e7bd78, #d87d47); }
-.meal-photo span { font-size: 76px; filter: drop-shadow(0 9px 4px rgba(74,39,22,.2)); transform: rotate(-8deg); }
+.meal-photo img { width: 96%; height: 100%; object-fit: contain; filter: drop-shadow(0 9px 4px rgba(74,39,22,.2)); }
 .meal-card-content { padding: 15px 19px 17px; }
 .card-kicker { color: var(--coral); font-size: 8px; font-weight: 800; letter-spacing: 1.3px; }
 .card-kicker span { margin-left: 3px; font-size: 11px; }
