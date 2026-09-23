@@ -1,6 +1,7 @@
 const searchForm = document.querySelector("#restaurant-search");
 const searchInput = document.querySelector("#search-input");
 const toast = document.querySelector("#toast");
+const menuItems = window.FASTFOODFINDER_DATA?.items ?? [];
 let toastTimer;
 
 function showMessage(message) {
@@ -18,7 +19,28 @@ function submitSearch(value) {
     return;
   }
 
-  showMessage(`We'll help you find smarter choices at ${query}.`);
+  const normalizedQuery = query.toLowerCase();
+  const matches = menuItems.filter((item) => (
+    item.name.toLowerCase().includes(normalizedQuery)
+    || item.category.toLowerCase().includes(normalizedQuery)
+  ));
+
+  if (normalizedQuery.includes("mcdonald")) {
+    showMessage(`McDonald's menu loaded: ${menuItems.length} items ready to filter.`);
+    return;
+  }
+
+  if (matches.length === 0) {
+    showMessage(`No McDonald's menu items matched "${query}".`);
+    return;
+  }
+
+  const preview = matches
+    .slice(0, 3)
+    .map((item) => `${item.name}${item.calories === null ? "" : ` (${item.calories} cal)`}`)
+    .join(", ");
+  const suffix = matches.length > 3 ? ` + ${matches.length - 3} more` : "";
+  showMessage(`${matches.length} match${matches.length === 1 ? "" : "es"}: ${preview}${suffix}`);
 }
 
 searchForm.addEventListener("submit", (event) => {
