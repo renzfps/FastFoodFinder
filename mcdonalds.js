@@ -1,692 +1,1395 @@
 ﻿window.FASTFOODFINDER_DATA = {
     "restaurant":  "McDonald\u0027s",
     "source":  "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html",
+    "sourceUrl":  "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html",
     "scrapedAt":  "2026-09-23",
-    "note":  "Snapshot of products rendered by the public nutrition calculator. Values and availability can change.",
+    "note":  "Live snapshot from the public McDonald\u0027s nutrition calculator. Meal bundles without a fixed configuration are marked unavailable; values can change.",
     "items":  [
                   {
-                      "id":  "203745",
-                      "name":  "Deluxe McCrispy®",
-                      "category":  "Chicken \u0026 Fish Sandwiches",
-                      "calories":  530
+                      "id":  "203841",
+                      "name":  "Spicy Chicken Mcnuggets (10 Piece)",
+                      "category":  "Spicy Chicken McNuggets®",
+                      "calories":  490,
+                      "proteinGrams":  26,
+                      "carbsGrams":  28,
+                      "fatGrams":  30,
+                      "serving":  "10 Piece",
+                      "status":  "ok"
                   },
                   {
-                      "id":  "200302",
-                      "name":  "Sausage Biscuit with Egg",
-                      "category":  "Breakfast",
-                      "calories":  530
+                      "id":  "203834",
+                      "name":  "Mighty Hot Sauce",
+                      "category":  "Spicy Chicken McNuggets®",
+                      "calories":  25,
+                      "proteinGrams":  0,
+                      "carbsGrams":  6,
+                      "fatGrams":  0,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
-                      "id":  "203885",
-                      "name":  "McCafé® Iced Coffee",
-                      "category":  "McCafé®",
-                      "calories":  150
+                      "id":  "204650",
+                      "name":  "Sausage Biscuit Meal Deal",
+                      "category":  "McValue®",
+                      "calories":  null,
+                      "proteinGrams":  null,
+                      "carbsGrams":  null,
+                      "fatGrams":  null,
+                      "serving":  "Standard ingredients",
+                      "status":  "unavailable"
                   },
                   {
-                      "id":  "203410",
-                      "name":  "Bacon Quarter Pounder®* with Cheese",
-                      "category":  "Burgers",
-                      "calories":  630
+                      "id":  "204651",
+                      "name":  "Sausage McMuffin Meal Deal",
+                      "category":  "McValue®",
+                      "calories":  null,
+                      "proteinGrams":  null,
+                      "carbsGrams":  null,
+                      "fatGrams":  null,
+                      "serving":  "Standard ingredients",
+                      "status":  "unavailable"
                   },
                   {
-                      "id":  "204717",
-                      "name":  "Vanilla Swirl with Coca-Cola®",
-                      "category":  "McCafé®",
-                      "calories":  260
-                  },
-                  {
-                      "id":  "200155",
-                      "name":  "Mango Pineapple Smoothie",
-                      "category":  "Drinks",
-                      "calories":  200
-                  },
-                  {
-                      "id":  "200304",
-                      "name":  "Bacon, Egg \u0026 Cheese McGriddles®",
-                      "category":  "Breakfast",
-                      "calories":  430
-                  },
-                  {
-                      "id":  "200152",
-                      "name":  "Strawberry Banana Smoothie",
-                      "category":  "Drinks",
-                      "calories":  190
-                  },
-                  {
-                      "id":  "200612",
-                      "name":  "Diet Coke®",
-                      "category":  "Drinks",
-                      "calories":  0
-                  },
-                  {
-                      "id":  "200062",
-                      "name":  "Vanilla Cone",
-                      "category":  "Sweets \u0026 Treats",
-                      "calories":  200
-                  },
-                  {
-                      "id":  "200731",
-                      "name":  "Sausage Biscuit with Egg Meal",
-                      "category":  "Breakfast",
-                      "calories":  null
-                  },
-                  {
-                      "id":  "202381",
-                      "name":  "McCafé® Americano",
-                      "category":  "McCafé®",
-                      "calories":  0
-                  },
-                  {
-                      "id":  "200300",
-                      "name":  "Bacon, Egg \u0026 Cheese Biscuit",
-                      "category":  "Breakfast",
-                      "calories":  460
-                  },
-                  {
-                      "id":  "200724",
-                      "name":  "Sausage McMuffin® with Egg Meal",
-                      "category":  "Breakfast",
-                      "calories":  null
-                  },
-                  {
-                      "id":  "200074",
-                      "name":  "Hot Fudge Sundae",
-                      "category":  "Sweets \u0026 Treats",
-                      "calories":  330
-                  },
-                  {
-                      "id":  "200723",
-                      "name":  "Bacon, Egg \u0026 Cheese Biscuit Meal",
-                      "category":  "Breakfast",
-                      "calories":  null
-                  },
-                  {
-                      "id":  "204209",
-                      "name":  "McCafé® French Vanilla Latte",
-                      "category":  "McCafé®",
-                      "calories":  250
-                  },
-                  {
-                      "id":  "204487",
-                      "name":  "Mango Pineapple Refresher",
-                      "category":  "McCafé®",
-                      "calories":  180
+                      "id":  "204350",
+                      "name":  "The McChicken Meal Deal Bundle",
+                      "category":  "McValue®",
+                      "calories":  null,
+                      "proteinGrams":  null,
+                      "carbsGrams":  null,
+                      "fatGrams":  null,
+                      "serving":  "Standard ingredients",
+                      "status":  "unavailable"
                   },
                   {
                       "id":  "204349",
-                      "name":  "The McDouble® Meal Deal*",
+                      "name":  "The McDouble Meal Deal Bundle",
                       "category":  "McValue®",
-                      "calories":  null
-                  },
-                  {
-                      "id":  "200500",
-                      "name":  "McCafé® Cappuccino",
-                      "category":  "McCafé®",
-                      "calories":  110
-                  },
-                  {
-                      "id":  "202140",
-                      "name":  "Sweet Tea",
-                      "category":  "Drinks",
-                      "calories":  170
-                  },
-                  {
-                      "id":  "200477",
-                      "name":  "Hamburger: The Classic McDonald\u0027s Burger",
-                      "category":  "Burgers",
-                      "calories":  250
-                  },
-                  {
-                      "id":  "201306",
-                      "name":  "Bagel (plain)",
-                      "category":  "Breakfast",
-                      "calories":  270
-                  },
-                  {
-                      "id":  "200322",
-                      "name":  "Big Breakfast®",
-                      "category":  "Breakfast",
-                      "calories":  1060
-                  },
-                  {
-                      "id":  "200066",
-                      "name":  "Small World Famous Fries®",
-                      "category":  "McValue®",
-                      "calories":  230
-                  },
-                  {
-                      "id":  "204630",
-                      "name":  "Dirty Dr Pepper®",
-                      "category":  "McCafé®",
-                      "calories":  250
-                  },
-                  {
-                      "id":  "204472",
-                      "name":  "Strawberry Watermelon Refresher",
-                      "category":  "McCafé®",
-                      "calories":  160
-                  },
-                  {
-                      "id":  "200715",
-                      "name":  "Bacon, Egg \u0026 Cheese McGriddles® Meal",
-                      "category":  "Breakfast",
-                      "calories":  null
-                  },
-                  {
-                      "id":  "204688",
-                      "name":  "Reduced Sugar Red Bull® Dragonberry Energizer*",
-                      "category":  "McCafé®",
-                      "calories":  100
-                  },
-                  {
-                      "id":  "200306",
-                      "name":  "Sausage McGriddles®",
-                      "category":  "Breakfast",
-                      "calories":  430
-                  },
-                  {
-                      "id":  "204558",
-                      "name":  "Bacon, Egg \u0026 Cheese Bagel Meal",
-                      "category":  "Breakfast",
-                      "calories":  null
-                  },
-                  {
-                      "id":  "203275",
-                      "name":  "McCafé® Iced Caramel Macchiato",
-                      "category":  "McCafé®",
-                      "calories":  200
-                  },
-                  {
-                      "id":  "200607",
-                      "name":  "Reduced Sugar^ Low Fat Chocolate Milk Jug",
-                      "category":  "Drinks",
-                      "calories":  130
-                  },
-                  {
-                      "id":  "200109",
-                      "name":  "Strawberry Shake",
-                      "category":  "Sweets \u0026 Treats",
-                      "calories":  470
-                  },
-                  {
-                      "id":  "203082",
-                      "name":  "Honest Kids® Appley Ever After® Organic Juice Drink",
-                      "category":  "Drinks",
-                      "calories":  35
-                  },
-                  {
-                      "id":  "204219",
-                      "name":  "McCafé® Iced French Vanilla Coffee",
-                      "category":  "McCafé®",
-                      "calories":  150
-                  },
-                  {
-                      "id":  "204716",
-                      "name":  "Orange Dream with Fanta®",
-                      "category":  "McCafé®",
-                      "calories":  250
-                  },
-                  {
-                      "id":  "204498",
-                      "name":  "Red Bull® Dragonberry Energizer*",
-                      "category":  "McCafé®",
-                      "calories":  200
-                  },
-                  {
-                      "id":  "200463",
-                      "name":  "Big Mac®",
-                      "category":  "Burgers",
-                      "calories":  580
-                  },
-                  {
-                      "id":  "203873",
-                      "name":  "Spicy Deluxe McCrispy®",
-                      "category":  "Chicken \u0026 Fish Sandwiches",
-                      "calories":  530
-                  },
-                  {
-                      "id":  "200610",
-                      "name":  "1% Low Fat Milk Jug",
-                      "category":  "Drinks",
-                      "calories":  100
-                  },
-                  {
-                      "id":  "203957",
-                      "name":  "Lemonade",
-                      "category":  "Drinks",
-                      "calories":  120
-                  },
-                  {
-                      "id":  "200298",
-                      "name":  "Egg McMuffin®",
-                      "category":  "Breakfast",
-                      "calories":  310
+                      "calories":  null,
+                      "proteinGrams":  null,
+                      "carbsGrams":  null,
+                      "fatGrams":  null,
+                      "serving":  "Standard ingredients",
+                      "status":  "unavailable"
                   },
                   {
                       "id":  "200301",
                       "name":  "Sausage Biscuit",
                       "category":  "McValue®",
-                      "calories":  460
+                      "calories":  460,
+                      "proteinGrams":  11,
+                      "carbsGrams":  37,
+                      "fatGrams":  30,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
-                      "id":  "204452",
-                      "name":  "Sprite® Berry Blast",
-                      "category":  "McCafé®",
-                      "calories":  240
-                  },
-                  {
-                      "id":  "200424",
-                      "name":  "Bacon, Egg \u0026 Cheese Bagel",
-                      "category":  "Breakfast",
-                      "calories":  590
-                  },
-                  {
-                      "id":  "200096",
-                      "name":  "M\u0026M\u0027S® McFlurry®",
-                      "category":  "Sweets \u0026 Treats",
-                      "calories":  570
-                  },
-                  {
-                      "id":  "200717",
-                      "name":  "Sausage McGriddles® Meal",
-                      "category":  "Breakfast",
-                      "calories":  null
+                      "id":  "200449",
+                      "name":  "Sausage McMuffin",
+                      "category":  "McValue®",
+                      "calories":  400,
+                      "proteinGrams":  14,
+                      "carbsGrams":  29,
+                      "fatGrams":  26,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
                       "id":  "200267",
                       "name":  "Sausage Burrito",
                       "category":  "McValue®",
-                      "calories":  310
-                  },
-                  {
-                      "id":  "204401",
-                      "name":  "Ranch Snack Wrap®",
-                      "category":  "Snack Wrap®",
-                      "calories":  400
-                  },
-                  {
-                      "id":  "204618",
-                      "name":  "Blackberry Passion Fruit Refresher",
-                      "category":  "McCafé®",
-                      "calories":  170
-                  },
-                  {
-                      "id":  "200007",
-                      "name":  "Baked Apple Pie",
-                      "category":  "Sweets \u0026 Treats",
-                      "calories":  230
-                  },
-                  {
-                      "id":  "204208",
-                      "name":  "McCafé® Caramel Latte",
-                      "category":  "McCafé®",
-                      "calories":  250
-                  },
-                  {
-                      "id":  "201711",
-                      "name":  "Sprite®",
-                      "category":  "Drinks",
-                      "calories":  190
-                  },
-                  {
-                      "id":  "204709",
-                      "name":  "Reduced Sugar Vanilla Swirl with Diet Coke®",
-                      "category":  "McCafé®",
-                      "calories":  150
-                  },
-                  {
-                      "id":  "200009",
-                      "name":  "Chocolate Chip Cookie",
-                      "category":  "Sweets \u0026 Treats",
-                      "calories":  170
-                  },
-                  {
-                      "id":  "200609",
-                      "name":  "DASANI® Water",
-                      "category":  "Drinks",
-                      "calories":  0
-                  },
-                  {
-                      "id":  "200068",
-                      "name":  "Apple Slices",
-                      "category":  "Fries \u0026 Sides",
-                      "calories":  15
-                  },
-                  {
-                      "id":  "203747",
-                      "name":  "McCrispy®",
-                      "category":  "Chicken \u0026 Fish Sandwiches",
-                      "calories":  470
-                  },
-                  {
-                      "id":  "204386",
-                      "name":  "McCrispy® Strips",
-                      "category":  "McNuggets® \u0026 McCrispy® Strips",
-                      "calories":  400
-                  },
-                  {
-                      "id":  "200258",
-                      "name":  "Hotcakes and Sausage",
-                      "category":  "Breakfast",
-                      "calories":  770
-                  },
-                  {
-                      "id":  "204650",
-                      "name":  "The Sausage Biscuit Meal Deal",
-                      "category":  "McValue®",
-                      "calories":  null
-                  },
-                  {
-                      "id":  "204651",
-                      "name":  "The Sausage McMuffin® Meal Deal",
-                      "category":  "McValue®",
-                      "calories":  null
+                      "calories":  310,
+                      "proteinGrams":  13,
+                      "carbsGrams":  25,
+                      "fatGrams":  17,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
                       "id":  "200340",
                       "name":  "Hash Browns",
                       "category":  "McValue®",
-                      "calories":  140
+                      "calories":  140,
+                      "proteinGrams":  2,
+                      "carbsGrams":  18,
+                      "fatGrams":  8,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
-                      "id":  "202116",
-                      "name":  "Hot Tea",
-                      "category":  "McCafé®",
-                      "calories":  10
+                      "id":  "200543",
+                      "name":  "Coffee (Medium)",
+                      "category":  "McValue®",
+                      "calories":  10,
+                      "proteinGrams":  1,
+                      "carbsGrams":  1,
+                      "fatGrams":  0,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200491",
+                      "name":  "McDouble",
+                      "category":  "McValue®",
+                      "calories":  390,
+                      "proteinGrams":  22,
+                      "carbsGrams":  32,
+                      "fatGrams":  20,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
                       "id":  "200438",
-                      "name":  "McChicken®",
+                      "name":  "McChicken",
                       "category":  "McValue®",
-                      "calories":  390
+                      "calories":  390,
+                      "proteinGrams":  14,
+                      "carbsGrams":  38,
+                      "fatGrams":  21,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
-                      "id":  "200107",
-                      "name":  "Chocolate Shake",
-                      "category":  "Sweets \u0026 Treats",
-                      "calories":  520
+                      "id":  "200692",
+                      "name":  "Chicken McNuggets® (4 piece)",
+                      "category":  "McValue®",
+                      "calories":  170,
+                      "proteinGrams":  9,
+                      "carbsGrams":  10,
+                      "fatGrams":  10,
+                      "serving":  "4 piece",
+                      "status":  "ok"
                   },
                   {
-                      "id":  "204193",
-                      "name":  "McCafé® Iced Mocha Latte",
-                      "category":  "McCafé®",
-                      "calories":  270
+                      "id":  "200066",
+                      "name":  "Small French Fries",
+                      "category":  "McValue®",
+                      "calories":  230,
+                      "proteinGrams":  3,
+                      "carbsGrams":  31,
+                      "fatGrams":  11,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "201191",
+                      "name":  "Coca-Cola (Medium) No Ice",
+                      "category":  "McValue®",
+                      "calories":  270,
+                      "proteinGrams":  0,
+                      "carbsGrams":  70,
+                      "fatGrams":  0,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200300",
+                      "name":  "Bacon, Egg  \u0026 Cheese Biscuit",
+                      "category":  "Breakfast",
+                      "calories":  460,
+                      "proteinGrams":  17,
+                      "carbsGrams":  39,
+                      "fatGrams":  26,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200298",
+                      "name":  "Egg McMuffin",
+                      "category":  "Breakfast",
+                      "calories":  310,
+                      "proteinGrams":  17,
+                      "carbsGrams":  30,
+                      "fatGrams":  13,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
                       "id":  "200161",
                       "name":  "Sausage McMuffin® with Egg",
                       "category":  "Breakfast",
-                      "calories":  480
+                      "calories":  480,
+                      "proteinGrams":  20,
+                      "carbsGrams":  30,
+                      "fatGrams":  31,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
-                      "id":  "200101",
-                      "name":  "OREO® McFlurry®",
-                      "category":  "Sweets \u0026 Treats",
-                      "calories":  410
-                  },
-                  {
-                      "id":  "203557",
-                      "name":  "Hi-C® Orange Lavaburst®",
-                      "category":  "Drinks",
-                      "calories":  220
-                  },
-                  {
-                      "id":  "200466",
-                      "name":  "Quarter Pounder®* with Cheese",
-                      "category":  "Burgers",
-                      "calories":  520
-                  },
-                  {
-                      "id":  "204350",
-                      "name":  "The McChicken® Meal Deal*",
-                      "category":  "McValue®",
-                      "calories":  null
-                  },
-                  {
-                      "id":  "204189",
-                      "name":  "McCafé® Iced Caramel Latte",
-                      "category":  "McCafé®",
-                      "calories":  180
-                  },
-                  {
-                      "id":  "204402",
-                      "name":  "Spicy Snack Wrap®",
-                      "category":  "Snack Wrap®",
-                      "calories":  390
-                  },
-                  {
-                      "id":  "200284",
-                      "name":  "Fruit \u0026 Maple Oatmeal",
+                      "id":  "200302",
+                      "name":  "Sausage Biscuit  with Egg",
                       "category":  "Breakfast",
-                      "calories":  320
+                      "calories":  530,
+                      "proteinGrams":  17,
+                      "carbsGrams":  38,
+                      "fatGrams":  35,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
-                      "id":  "200491",
-                      "name":  "McDouble®",
-                      "category":  "McValue®",
-                      "calories":  390
+                      "id":  "200304",
+                      "name":  "Bacon, Egg \u0026 Cheese McGriddles",
+                      "category":  "Breakfast",
+                      "calories":  430,
+                      "proteinGrams":  17,
+                      "carbsGrams":  44,
+                      "fatGrams":  21,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
-                      "id":  "204205",
-                      "name":  "McCafé® Iced Caramel Coffee",
-                      "category":  "McCafé®",
-                      "calories":  150
-                  },
-                  {
-                      "id":  "200476",
-                      "name":  "Double Quarter Pounder®* with Cheese",
-                      "category":  "Burgers",
-                      "calories":  740
-                  },
-                  {
-                      "id":  "200020",
-                      "name":  "McCafé® Premium Roast Coffee",
-                      "category":  "McCafé®",
-                      "calories":  5
-                  },
-                  {
-                      "id":  "204201",
-                      "name":  "McCafé® Mocha Latte",
-                      "category":  "McCafé®",
-                      "calories":  290
-                  },
-                  {
-                      "id":  "200186",
-                      "name":  "McCafé® French Vanilla Cappuccino",
-                      "category":  "McCafé®",
-                      "calories":  210
-                  },
-                  {
-                      "id":  "200449",
-                      "name":  "Sausage McMuffin®",
-                      "category":  "McValue®",
-                      "calories":  400
-                  },
-                  {
-                      "id":  "200149",
-                      "name":  "McCafé® Caramel Frappé",
-                      "category":  "McCafé®",
-                      "calories":  420
+                      "id":  "200306",
+                      "name":  "Sausage McGriddles",
+                      "category":  "Breakfast",
+                      "calories":  430,
+                      "proteinGrams":  11,
+                      "carbsGrams":  41,
+                      "fatGrams":  24,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
                       "id":  "200307",
-                      "name":  "Sausage, Egg \u0026 Cheese McGriddles®",
+                      "name":  "Sausage, Egg \u0026 Cheese McGriddles",
                       "category":  "Breakfast",
-                      "calories":  550
+                      "calories":  550,
+                      "proteinGrams":  19,
+                      "carbsGrams":  44,
+                      "fatGrams":  33,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
-                      "id":  "200480",
-                      "name":  "Cheeseburger",
-                      "category":  "Burgers",
-                      "calories":  300
-                  },
-                  {
-                      "id":  "204159",
-                      "name":  "Frozen Hawaiian Punch®",
-                      "category":  "Drinks",
-                      "calories":  60
-                  },
-                  {
-                      "id":  "201677",
-                      "name":  "Coca-Cola®",
-                      "category":  "Drinks",
-                      "calories":  200
-                  },
-                  {
-                      "id":  "200765",
-                      "name":  "Quarter Pounder®* with Cheese Deluxe",
-                      "category":  "Burgers",
-                      "calories":  630
-                  },
-                  {
-                      "id":  "200181",
-                      "name":  "McCafé® Caramel Cappuccino",
-                      "category":  "McCafé®",
-                      "calories":  210
-                  },
-                  {
-                      "id":  "204559",
-                      "name":  "Steak, Egg \u0026 Cheese Bagel Meal",
+                      "id":  "200424",
+                      "name":  "Bacon, Egg \u0026 Cheese Bagel",
                       "category":  "Breakfast",
-                      "calories":  null
+                      "calories":  590,
+                      "proteinGrams":  25,
+                      "carbsGrams":  56,
+                      "fatGrams":  30,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
-                      "id":  "201201",
-                      "name":  "Dr Pepper®",
-                      "category":  "Drinks",
-                      "calories":  190
-                  },
-                  {
-                      "id":  "203087",
-                      "name":  "McCafé® Caramel Macchiato",
-                      "category":  "McCafé®",
-                      "calories":  260
-                  },
-                  {
-                      "id":  "200716",
-                      "name":  "Sausage Burrito Meal",
+                      "id":  "201030",
+                      "name":  "Sausage Egg and Cheese Bagel",
                       "category":  "Breakfast",
-                      "calories":  null
+                      "calories":  710,
+                      "proteinGrams":  27,
+                      "carbsGrams":  56,
+                      "fatGrams":  42,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
-                      "id":  "200692",
-                      "name":  "4 Piece Chicken McNuggets®",
-                      "category":  "McValue®",
-                      "calories":  170
-                  },
-                  {
-                      "id":  "200739",
-                      "name":  "Egg McMuffin® Meal",
+                      "id":  "200145",
+                      "name":  "Steak, Egg \u0026 Cheese Bagel",
                       "category":  "Breakfast",
-                      "calories":  null
+                      "calories":  680,
+                      "proteinGrams":  34,
+                      "carbsGrams":  57,
+                      "fatGrams":  35,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "201306",
+                      "name":  "Bagel Plain",
+                      "category":  "Breakfast",
+                      "calories":  270,
+                      "proteinGrams":  9,
+                      "carbsGrams":  51,
+                      "fatGrams":  3.5,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200876",
+                      "name":  "Egg and Cheese Bagel",
+                      "category":  "Breakfast",
+                      "calories":  520,
+                      "proteinGrams":  21,
+                      "carbsGrams":  55,
+                      "fatGrams":  24,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
                       "id":  "201256",
-                      "name":  "Egg Cheese Biscuit",
+                      "name":  "Egg and Cheese Biscuit",
                       "category":  "Breakfast",
-                      "calories":  390
+                      "calories":  390,
+                      "proteinGrams":  13,
+                      "carbsGrams":  39,
+                      "fatGrams":  21,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
-                      "id":  "200108",
-                      "name":  "Vanilla Shake",
-                      "category":  "Sweets \u0026 Treats",
-                      "calories":  480
-                  },
-                  {
-                      "id":  "200626",
-                      "name":  "Unsweetened Iced Tea",
-                      "category":  "Drinks",
-                      "calories":  0
-                  },
-                  {
-                      "id":  "200081",
-                      "name":  "Hot Caramel Sundae",
-                      "category":  "Sweets \u0026 Treats",
-                      "calories":  330
-                  },
-                  {
-                      "id":  "200486",
-                      "name":  "Double Cheeseburger",
-                      "category":  "Burgers",
-                      "calories":  440
-                  },
-                  {
-                      "id":  "204626",
-                      "name":  "Orange Dream with Hi-C®",
-                      "category":  "McCafé®",
-                      "calories":  260
-                  },
-                  {
-                      "id":  "200148",
-                      "name":  "McCafé® Mocha Frappé",
-                      "category":  "McCafé®",
-                      "calories":  430
-                  },
-                  {
-                      "id":  "204221",
-                      "name":  "McCafé® Iced Latte",
-                      "category":  "McCafé®",
-                      "calories":  80
-                  },
-                  {
-                      "id":  "201248",
-                      "name":  "Minute Maid® Premium Orange Juice",
-                      "category":  "Drinks",
-                      "calories":  190
-                  },
-                  {
-                      "id":  "200543",
-                      "name":  "McCafé® Premium Roast Coffee",
-                      "category":  "McValue®",
-                      "calories":  10
-                  },
-                  {
-                      "id":  "203901",
-                      "name":  "Spicy McCrispy®",
-                      "category":  "Chicken \u0026 Fish Sandwiches",
-                      "calories":  530
-                  },
-                  {
-                      "id":  "201191",
-                      "name":  "Medium Coca-Cola®",
-                      "category":  "McValue®",
-                      "calories":  270
-                  },
-                  {
-                      "id":  "204196",
-                      "name":  "McCafé® Latte",
-                      "category":  "McCafé®",
-                      "calories":  140
-                  },
-                  {
-                      "id":  "200445",
-                      "name":  "Filet-O-Fish®",
-                      "category":  "Chicken \u0026 Fish Sandwiches",
-                      "calories":  380
+                      "id":  "200322",
+                      "name":  "Big Breakfast",
+                      "category":  "Breakfast",
+                      "calories":  1060,
+                      "proteinGrams":  26,
+                      "carbsGrams":  131,
+                      "fatGrams":  48,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
                       "id":  "200323",
-                      "name":  "Big Breakfast® with Hotcakes",
+                      "name":  "Big Breakfast with Hotcakes",
                       "category":  "Breakfast",
-                      "calories":  1340
-                  },
-                  {
-                      "id":  "204206",
-                      "name":  "McCafé® Hot Chocolate",
-                      "category":  "McCafé®",
-                      "calories":  360
-                  },
-                  {
-                      "id":  "200714",
-                      "name":  "Sausage, Egg \u0026 Cheese McGriddles® Meal",
-                      "category":  "Breakfast",
-                      "calories":  null
+                      "calories":  1340,
+                      "proteinGrams":  36,
+                      "carbsGrams":  158,
+                      "fatGrams":  63,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
                   },
                   {
                       "id":  "200325",
                       "name":  "Hotcakes",
                       "category":  "Breakfast",
-                      "calories":  580
+                      "calories":  580,
+                      "proteinGrams":  9,
+                      "carbsGrams":  101,
+                      "fatGrams":  15,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200258",
+                      "name":  "Hotcakes and Sausage",
+                      "category":  "Breakfast",
+                      "calories":  770,
+                      "proteinGrams":  15,
+                      "carbsGrams":  102,
+                      "fatGrams":  33,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200284",
+                      "name":  "Fruit \u0026 Maple Oatmeal",
+                      "category":  "Breakfast",
+                      "calories":  320,
+                      "proteinGrams":  6,
+                      "carbsGrams":  64,
+                      "fatGrams":  4.5,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200739",
+                      "name":  "Egg McMuffin Meal",
+                      "category":  "Breakfast",
+                      "calories":  null,
+                      "proteinGrams":  null,
+                      "carbsGrams":  null,
+                      "fatGrams":  null,
+                      "serving":  "Standard ingredients",
+                      "status":  "unavailable"
+                  },
+                  {
+                      "id":  "200724",
+                      "name":  "Sausage McMuffin with Egg Meal",
+                      "category":  "Breakfast",
+                      "calories":  null,
+                      "proteinGrams":  null,
+                      "carbsGrams":  null,
+                      "fatGrams":  null,
+                      "serving":  "Standard ingredients",
+                      "status":  "unavailable"
+                  },
+                  {
+                      "id":  "200731",
+                      "name":  "Sausage Biscuit with Egg Meal",
+                      "category":  "Breakfast",
+                      "calories":  null,
+                      "proteinGrams":  null,
+                      "carbsGrams":  null,
+                      "fatGrams":  null,
+                      "serving":  "Standard ingredients",
+                      "status":  "unavailable"
+                  },
+                  {
+                      "id":  "200723",
+                      "name":  "Bacon, Egg \u0026 Cheese Biscuit Meal",
+                      "category":  "Breakfast",
+                      "calories":  null,
+                      "proteinGrams":  null,
+                      "carbsGrams":  null,
+                      "fatGrams":  null,
+                      "serving":  "Standard ingredients",
+                      "status":  "unavailable"
+                  },
+                  {
+                      "id":  "200715",
+                      "name":  "Bacon, Egg \u0026 Cheese McGriddles Meal",
+                      "category":  "Breakfast",
+                      "calories":  null,
+                      "proteinGrams":  null,
+                      "carbsGrams":  null,
+                      "fatGrams":  null,
+                      "serving":  "Standard ingredients",
+                      "status":  "unavailable"
+                  },
+                  {
+                      "id":  "200714",
+                      "name":  "Sausage, Egg \u0026 Cheese McGriddles Meal",
+                      "category":  "Breakfast",
+                      "calories":  null,
+                      "proteinGrams":  null,
+                      "carbsGrams":  null,
+                      "fatGrams":  null,
+                      "serving":  "Standard ingredients",
+                      "status":  "unavailable"
+                  },
+                  {
+                      "id":  "200717",
+                      "name":  "Sausage McGriddles Meal",
+                      "category":  "Breakfast",
+                      "calories":  null,
+                      "proteinGrams":  null,
+                      "carbsGrams":  null,
+                      "fatGrams":  null,
+                      "serving":  "Standard ingredients",
+                      "status":  "unavailable"
+                  },
+                  {
+                      "id":  "200716",
+                      "name":  "Sausage Burrito 2 Meal",
+                      "category":  "Breakfast",
+                      "calories":  null,
+                      "proteinGrams":  null,
+                      "carbsGrams":  null,
+                      "fatGrams":  null,
+                      "serving":  "Standard ingredients",
+                      "status":  "unavailable"
+                  },
+                  {
+                      "id":  "204559",
+                      "name":  "Steak, Egg \u0026 Cheese Bagel Meal",
+                      "category":  "Breakfast",
+                      "calories":  null,
+                      "proteinGrams":  null,
+                      "carbsGrams":  null,
+                      "fatGrams":  null,
+                      "serving":  "Standard ingredients",
+                      "status":  "unavailable"
+                  },
+                  {
+                      "id":  "204558",
+                      "name":  "Bacon, Egg \u0026 Cheese Bagel Meal",
+                      "category":  "Breakfast",
+                      "calories":  null,
+                      "proteinGrams":  null,
+                      "carbsGrams":  null,
+                      "fatGrams":  null,
+                      "serving":  "Standard ingredients",
+                      "status":  "unavailable"
+                  },
+                  {
+                      "id":  "200463",
+                      "name":  "Big Mac",
+                      "category":  "Burgers",
+                      "calories":  580,
+                      "proteinGrams":  25,
+                      "carbsGrams":  45,
+                      "fatGrams":  34,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200466",
+                      "name":  "Quarter Pounder with Cheese",
+                      "category":  "Burgers",
+                      "calories":  520,
+                      "proteinGrams":  30,
+                      "carbsGrams":  42,
+                      "fatGrams":  26,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200476",
+                      "name":  "Double Quarter Pounder with Cheese",
+                      "category":  "Burgers",
+                      "calories":  740,
+                      "proteinGrams":  48,
+                      "carbsGrams":  43,
+                      "fatGrams":  42,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200765",
+                      "name":  "Quarter Pounder® with Cheese Deluxe",
+                      "category":  "Burgers",
+                      "calories":  630,
+                      "proteinGrams":  30,
+                      "carbsGrams":  44,
+                      "fatGrams":  37,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200497",
+                      "name":  "Daily Double",
+                      "category":  "Burgers",
+                      "calories":  490,
+                      "proteinGrams":  22,
+                      "carbsGrams":  30,
+                      "fatGrams":  31,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203410",
+                      "name":  "Bacon Quarter Pounder with Cheese",
+                      "category":  "Burgers",
+                      "calories":  630,
+                      "proteinGrams":  36,
+                      "carbsGrams":  43,
+                      "fatGrams":  35,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200480",
+                      "name":  "Cheeseburger",
+                      "category":  "Burgers",
+                      "calories":  300,
+                      "proteinGrams":  15,
+                      "carbsGrams":  31,
+                      "fatGrams":  13,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200486",
+                      "name":  "Double Cheeseburger",
+                      "category":  "Burgers",
+                      "calories":  440,
+                      "proteinGrams":  25,
+                      "carbsGrams":  34,
+                      "fatGrams":  24,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200477",
+                      "name":  "Hamburger",
+                      "category":  "Burgers",
+                      "calories":  250,
+                      "proteinGrams":  12,
+                      "carbsGrams":  30,
+                      "fatGrams":  9,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203747",
+                      "name":  "McCrispy®",
+                      "category":  "Chicken \u0026 Fish Sandwiches",
+                      "calories":  470,
+                      "proteinGrams":  26,
+                      "carbsGrams":  46,
+                      "fatGrams":  20,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203745",
+                      "name":  "Deluxe McCrispy®",
+                      "category":  "Chicken \u0026 Fish Sandwiches",
+                      "calories":  530,
+                      "proteinGrams":  27,
+                      "carbsGrams":  48,
+                      "fatGrams":  26,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203901",
+                      "name":  "Spicy McCrispy®",
+                      "category":  "Chicken \u0026 Fish Sandwiches",
+                      "calories":  530,
+                      "proteinGrams":  27,
+                      "carbsGrams":  48,
+                      "fatGrams":  26,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203873",
+                      "name":  "Spicy Deluxe McCrispy®",
+                      "category":  "Chicken \u0026 Fish Sandwiches",
+                      "calories":  530,
+                      "proteinGrams":  27,
+                      "carbsGrams":  49,
+                      "fatGrams":  26,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200445",
+                      "name":  "Filet-O-Fish",
+                      "category":  "Chicken \u0026 Fish Sandwiches",
+                      "calories":  380,
+                      "proteinGrams":  16,
+                      "carbsGrams":  38,
+                      "fatGrams":  19,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204386",
+                      "name":  "Mccrispy Strips (3 Piece)",
+                      "category":  "McNuggets® \u0026 McCrispy® Strips",
+                      "calories":  400,
+                      "proteinGrams":  31,
+                      "carbsGrams":  24,
+                      "fatGrams":  20,
+                      "serving":  "3 Piece",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204401",
+                      "name":  "Snack Wrap Mccrispy Ranch",
+                      "category":  "Snack Wrap®",
+                      "calories":  400,
+                      "proteinGrams":  17,
+                      "carbsGrams":  32,
+                      "fatGrams":  23,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204402",
+                      "name":  "Snack Wrap Mccrispy Spicy",
+                      "category":  "Snack Wrap®",
+                      "calories":  390,
+                      "proteinGrams":  17,
+                      "carbsGrams":  32,
+                      "fatGrams":  22,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200068",
+                      "name":  "Apple Slices",
+                      "category":  "Fries \u0026 Sides",
+                      "calories":  15,
+                      "proteinGrams":  0,
+                      "carbsGrams":  4,
+                      "fatGrams":  0,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200101",
+                      "name":  "McFlurry with Oreo Cookies",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  410,
+                      "proteinGrams":  10,
+                      "carbsGrams":  64,
+                      "fatGrams":  13,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200096",
+                      "name":  "McFlurry with M\u0026M\u0027S Chocolate Candies",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  570,
+                      "proteinGrams":  11,
+                      "carbsGrams":  85,
+                      "fatGrams":  19,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200062",
+                      "name":  "Vanilla Cone",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  200,
+                      "proteinGrams":  5,
+                      "carbsGrams":  33,
+                      "fatGrams":  5,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200107",
+                      "name":  "Chocolate Shake (Small)",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  520,
+                      "proteinGrams":  12,
+                      "carbsGrams":  85,
+                      "fatGrams":  14,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200108",
+                      "name":  "Vanilla Shake (Small)",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  480,
+                      "proteinGrams":  10,
+                      "carbsGrams":  80,
+                      "fatGrams":  13,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200109",
+                      "name":  "Strawberry Shake (Small)",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  470,
+                      "proteinGrams":  10,
+                      "carbsGrams":  77,
+                      "fatGrams":  13,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200074",
+                      "name":  "Hot Fudge Sundae",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  330,
+                      "proteinGrams":  8,
+                      "carbsGrams":  51,
+                      "fatGrams":  10,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200081",
+                      "name":  "Hot Caramel Sundae",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  330,
+                      "proteinGrams":  7,
+                      "carbsGrams":  58,
+                      "fatGrams":  7,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200007",
+                      "name":  "Baked Hot Apple Pie",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  230,
+                      "proteinGrams":  2,
+                      "carbsGrams":  33,
+                      "fatGrams":  11,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200009",
+                      "name":  "Chocolate Chip Cookie",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  170,
+                      "proteinGrams":  2,
+                      "carbsGrams":  22,
+                      "fatGrams":  8,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203885",
+                      "name":  "Iced Coffee (Small)",
+                      "category":  "McCafé®",
+                      "calories":  150,
+                      "proteinGrams":  1,
+                      "carbsGrams":  25,
+                      "fatGrams":  5,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204171",
+                      "name":  "Iced Bold Blend Coffee Black (small)",
+                      "category":  "McCafé®",
+                      "calories":  5,
+                      "proteinGrams":  1,
+                      "carbsGrams":  1,
+                      "fatGrams":  0,
+                      "serving":  "small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204205",
+                      "name":  "Iced Caramel Coffee (small)",
+                      "category":  "McCafé®",
+                      "calories":  150,
+                      "proteinGrams":  2,
+                      "carbsGrams":  23,
+                      "fatGrams":  5,
+                      "serving":  "small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204219",
+                      "name":  "Iced French Vanilla Coffee (small)",
+                      "category":  "McCafé®",
+                      "calories":  150,
+                      "proteinGrams":  1,
+                      "carbsGrams":  25,
+                      "fatGrams":  5,
+                      "serving":  "small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200020",
+                      "name":  "Coffee (Small)",
+                      "category":  "McCafé®",
+                      "calories":  5,
+                      "proteinGrams":  0,
+                      "carbsGrams":  1,
+                      "fatGrams":  0,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "201038",
+                      "name":  "Coffee Decaf (Small)",
+                      "category":  "McCafé®",
+                      "calories":  5,
+                      "proteinGrams":  1,
+                      "carbsGrams":  1,
+                      "fatGrams":  0,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "202116",
+                      "name":  "Hot Tea (Small )",
+                      "category":  "McCafé®",
+                      "calories":  10,
+                      "proteinGrams":  2,
+                      "carbsGrams":  0,
+                      "fatGrams":  0,
+                      "serving":  "Small ",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204206",
+                      "name":  "Hot Chocolate (small)",
+                      "category":  "McCafé®",
+                      "calories":  360,
+                      "proteinGrams":  11,
+                      "carbsGrams":  51,
+                      "fatGrams":  12,
+                      "serving":  "small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204498",
+                      "name":  "Red Bull Dragonberry Energizer 22 Oz",
+                      "category":  "McCafé®",
+                      "calories":  200,
+                      "proteinGrams":  0,
+                      "carbsGrams":  50,
+                      "fatGrams":  0,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204688",
+                      "name":  "Red Bull Zero Sugar Dragonberry Energizer Medium",
+                      "category":  "McCafé®",
+                      "calories":  100,
+                      "proteinGrams":  0,
+                      "carbsGrams":  29,
+                      "fatGrams":  0,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204452",
+                      "name":  "Sprite Berry Blast 16 Oz",
+                      "category":  "McCafé®",
+                      "calories":  240,
+                      "proteinGrams":  0,
+                      "carbsGrams":  47,
+                      "fatGrams":  6,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204472",
+                      "name":  "Strawberry Watermelon Lemonade Refresher 16 Oz",
+                      "category":  "McCafé®",
+                      "calories":  160,
+                      "proteinGrams":  0,
+                      "carbsGrams":  36,
+                      "fatGrams":  0,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204630",
+                      "name":  "Dirty Dr. Pepper 16 Oz",
+                      "category":  "McCafé®",
+                      "calories":  250,
+                      "proteinGrams":  0,
+                      "carbsGrams":  51,
+                      "fatGrams":  6,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204717",
+                      "name":  "Vanilla Swirl With Coke Small",
+                      "category":  "McCafé®",
+                      "calories":  260,
+                      "proteinGrams":  0,
+                      "carbsGrams":  53,
+                      "fatGrams":  6,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204709",
+                      "name":  "Reduced Sugar Vanilla Swirl with Diet Coke Small",
+                      "category":  "McCafé®",
+                      "calories":  150,
+                      "proteinGrams":  0,
+                      "carbsGrams":  25,
+                      "fatGrams":  6,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204487",
+                      "name":  "Mango Pineapple Lemonade Refresher 16 Oz",
+                      "category":  "McCafé®",
+                      "calories":  180,
+                      "proteinGrams":  0,
+                      "carbsGrams":  43,
+                      "fatGrams":  0,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204618",
+                      "name":  "Blackberry Passion Fruit Lemonade Refresher 16 Oz",
+                      "category":  "McCafé®",
+                      "calories":  170,
+                      "proteinGrams":  1,
+                      "carbsGrams":  40,
+                      "fatGrams":  0,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204626",
+                      "name":  "Orange Dream with Hi-C Small",
+                      "category":  "McCafé®",
+                      "calories":  260,
+                      "proteinGrams":  0,
+                      "carbsGrams":  53,
+                      "fatGrams":  6,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204716",
+                      "name":  "Orange Dream with Fanta Small",
+                      "category":  "McCafé®",
+                      "calories":  250,
+                      "proteinGrams":  0,
+                      "carbsGrams":  51,
+                      "fatGrams":  6,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200149",
+                      "name":  "Frappe Caramel (Small)",
+                      "category":  "McCafé®",
+                      "calories":  420,
+                      "proteinGrams":  7,
+                      "carbsGrams":  60,
+                      "fatGrams":  17,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200148",
+                      "name":  "Frappe Mocha (Small)",
+                      "category":  "McCafé®",
+                      "calories":  430,
+                      "proteinGrams":  7,
+                      "carbsGrams":  61,
+                      "fatGrams":  17,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203087",
+                      "name":  "Caramel Macchiato (Small)",
+                      "category":  "McCafé®",
+                      "calories":  260,
+                      "proteinGrams":  9,
+                      "carbsGrams":  41,
+                      "fatGrams":  6,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203275",
+                      "name":  "Iced Caramel Macchiato (Small)",
+                      "category":  "McCafé®",
+                      "calories":  200,
+                      "proteinGrams":  7,
+                      "carbsGrams":  33,
+                      "fatGrams":  5,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204201",
+                      "name":  "Mocha (small)",
+                      "category":  "McCafé®",
+                      "calories":  290,
+                      "proteinGrams":  8,
+                      "carbsGrams":  45,
+                      "fatGrams":  9,
+                      "serving":  "small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204193",
+                      "name":  "Mocha Iced (small)",
+                      "category":  "McCafé®",
+                      "calories":  270,
+                      "proteinGrams":  7,
+                      "carbsGrams":  39,
+                      "fatGrams":  10,
+                      "serving":  "small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204196",
+                      "name":  "Latte (small)",
+                      "category":  "McCafé®",
+                      "calories":  140,
+                      "proteinGrams":  8,
+                      "carbsGrams":  13,
+                      "fatGrams":  7,
+                      "serving":  "small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204208",
+                      "name":  "Latte Caramel (small)",
+                      "category":  "McCafé®",
+                      "calories":  250,
+                      "proteinGrams":  9,
+                      "carbsGrams":  39,
+                      "fatGrams":  7,
+                      "serving":  "small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204209",
+                      "name":  "Latte French Vanilla (small)",
+                      "category":  "McCafé®",
+                      "calories":  250,
+                      "proteinGrams":  8,
+                      "carbsGrams":  41,
+                      "fatGrams":  6,
+                      "serving":  "small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204221",
+                      "name":  "Latte Iced (small)",
+                      "category":  "McCafé®",
+                      "calories":  80,
+                      "proteinGrams":  5,
+                      "carbsGrams":  8,
+                      "fatGrams":  4,
+                      "serving":  "small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204189",
+                      "name":  "Latte Iced Caramel (small)",
+                      "category":  "McCafé®",
+                      "calories":  180,
+                      "proteinGrams":  6,
+                      "carbsGrams":  28,
+                      "fatGrams":  4.5,
+                      "serving":  "small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200500",
+                      "name":  "Cappuccino (Small)",
+                      "category":  "McCafé®",
+                      "calories":  110,
+                      "proteinGrams":  6,
+                      "carbsGrams":  10,
+                      "fatGrams":  5,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200186",
+                      "name":  "Vanilla Cappuccino (Small)",
+                      "category":  "McCafé®",
+                      "calories":  210,
+                      "proteinGrams":  5,
+                      "carbsGrams":  37,
+                      "fatGrams":  4.5,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200181",
+                      "name":  "Caramel Cappuccino (Small)",
+                      "category":  "McCafé®",
+                      "calories":  210,
+                      "proteinGrams":  7,
+                      "carbsGrams":  35,
+                      "fatGrams":  4.5,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "202381",
+                      "name":  "Espresso Americano Coffee (Small)",
+                      "category":  "McCafé®",
+                      "calories":  0,
+                      "proteinGrams":  0,
+                      "carbsGrams":  1,
+                      "fatGrams":  0,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "201677",
+                      "name":  "Coca-Cola (Small) No Ice",
+                      "category":  "Drinks",
+                      "calories":  200,
+                      "proteinGrams":  0,
+                      "carbsGrams":  53,
+                      "fatGrams":  0,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200612",
+                      "name":  "Diet Coke (Small)",
+                      "category":  "Drinks",
+                      "calories":  0,
+                      "proteinGrams":  0,
+                      "carbsGrams":  0,
+                      "fatGrams":  0,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "201711",
+                      "name":  "Sprite (Small) No Ice",
+                      "category":  "Drinks",
+                      "calories":  190,
+                      "proteinGrams":  0,
+                      "carbsGrams":  49,
+                      "fatGrams":  0,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203557",
+                      "name":  "Hi-C Orange (Small) No Ice",
+                      "category":  "Drinks",
+                      "calories":  220,
+                      "proteinGrams":  0,
+                      "carbsGrams":  56,
+                      "fatGrams":  0,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "201201",
+                      "name":  "Dr Pepper (Small) No Ice",
+                      "category":  "Drinks",
+                      "calories":  190,
+                      "proteinGrams":  0,
+                      "carbsGrams":  52,
+                      "fatGrams":  0,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203957",
+                      "name":  "McDonald\u0027s Lemonade (16 Oz.)",
+                      "category":  "Drinks",
+                      "calories":  120,
+                      "proteinGrams":  0,
+                      "carbsGrams":  31,
+                      "fatGrams":  0,
+                      "serving":  "16 Oz.",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "202140",
+                      "name":  "Sweet Tea (Small) No Ice",
+                      "category":  "Drinks",
+                      "calories":  170,
+                      "proteinGrams":  1,
+                      "carbsGrams":  42,
+                      "fatGrams":  0,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200626",
+                      "name":  "Unsweetened Iced Tea (Small)",
+                      "category":  "Drinks",
+                      "calories":  0,
+                      "proteinGrams":  1,
+                      "carbsGrams":  0,
+                      "fatGrams":  0,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200609",
+                      "name":  "Dasani Water",
+                      "category":  "Drinks",
+                      "calories":  0,
+                      "proteinGrams":  0,
+                      "carbsGrams":  0,
+                      "fatGrams":  0,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200610",
+                      "name":  "1% Low Fat Milk Jug",
+                      "category":  "Drinks",
+                      "calories":  100,
+                      "proteinGrams":  8,
+                      "carbsGrams":  12,
+                      "fatGrams":  2,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200607",
+                      "name":  "Reduced Sugar* Low Fat Chocolate Milk Jug",
+                      "category":  "Drinks",
+                      "calories":  130,
+                      "proteinGrams":  9,
+                      "carbsGrams":  18,
+                      "fatGrams":  2.5,
+                      "serving":  "Standard ingredients",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "201248",
+                      "name":  "Minute Maid Orange Juice (Medium)",
+                      "category":  "Drinks",
+                      "calories":  190,
+                      "proteinGrams":  3,
+                      "carbsGrams":  45,
+                      "fatGrams":  0,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203082",
+                      "name":  "Honest Kids Appley Ever After (Box 6 fl oz Drink Box)",
+                      "category":  "Drinks",
+                      "calories":  35,
+                      "proteinGrams":  0,
+                      "carbsGrams":  8,
+                      "fatGrams":  0,
+                      "serving":  "Box 6 fl oz Drink Box",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "204159",
+                      "name":  "Frozen Hawaiian Punch (small)",
+                      "category":  "Drinks",
+                      "calories":  60,
+                      "proteinGrams":  0,
+                      "carbsGrams":  15,
+                      "fatGrams":  0,
+                      "serving":  "small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "202274",
+                      "name":  "Frozen Coca Cola Classic (Small)",
+                      "category":  "Drinks",
+                      "calories":  60,
+                      "proteinGrams":  0,
+                      "carbsGrams":  16,
+                      "fatGrams":  0,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "201971",
+                      "name":  "Frozen Fanta Blue Raspberry (Small)",
+                      "category":  "Drinks",
+                      "calories":  60,
+                      "proteinGrams":  0,
+                      "carbsGrams":  16,
+                      "fatGrams":  0,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200152",
+                      "name":  "Strawberry Banana Smoothie (Small)",
+                      "category":  "Drinks",
+                      "calories":  190,
+                      "proteinGrams":  2,
+                      "carbsGrams":  44,
+                      "fatGrams":  0.5,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200155",
+                      "name":  "Mango Pineapple Smoothie (Small)",
+                      "category":  "Drinks",
+                      "calories":  200,
+                      "proteinGrams":  2,
+                      "carbsGrams":  45,
+                      "fatGrams":  0.5,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200605",
+                      "name":  "Iced Coffee (Medium)",
+                      "category":  "McCafé®",
+                      "calories":  190,
+                      "proteinGrams":  2,
+                      "carbsGrams":  32,
+                      "fatGrams":  6,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203882",
+                      "name":  "Iced Coffee (Large)",
+                      "category":  "McCafé®",
+                      "calories":  270,
+                      "proteinGrams":  2,
+                      "carbsGrams":  47,
+                      "fatGrams":  8,
+                      "serving":  "Large",
+                      "status":  "ok"
                   }
               ]
 };

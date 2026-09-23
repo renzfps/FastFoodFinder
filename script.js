@@ -26,7 +26,8 @@ function submitSearch(value) {
   ));
 
   if (normalizedQuery.includes("mcdonald")) {
-    showMessage(`McDonald's menu loaded: ${menuItems.length} items ready to filter.`);
+    const availableItems = menuItems.filter((item) => item.status === "ok");
+    showMessage(`McDonald's menu loaded: ${availableItems.length} items with complete nutrition data (${menuItems.length} total).`);
     return;
   }
 
@@ -37,7 +38,13 @@ function submitSearch(value) {
 
   const preview = matches
     .slice(0, 3)
-    .map((item) => `${item.name}${item.calories === null ? "" : ` (${item.calories} cal)`}`)
+    .map((item) => {
+      if (item.status !== "ok") {
+        return `${item.name} (nutrition unavailable)`;
+      }
+
+      return `${item.name} (${item.calories} cal, ${item.proteinGrams}g protein, ${item.carbsGrams}g carbs, ${item.fatGrams}g fat)`;
+    })
     .join(", ");
   const suffix = matches.length > 3 ? ` + ${matches.length - 3} more` : "";
   showMessage(`${matches.length} match${matches.length === 1 ? "" : "es"}: ${preview}${suffix}`);
