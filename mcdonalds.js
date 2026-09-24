@@ -2,8 +2,8 @@
     "restaurant":  "McDonald\u0027s",
     "source":  "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html",
     "sourceUrl":  "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html",
-    "scrapedAt":  "2026-09-23",
-    "note":  "Live snapshot from the public McDonald\u0027s nutrition calculator. Meal bundles without a fixed configuration are marked unavailable; values can change.",
+    "scrapedAt":  "2026-09-24",
+    "note":  "Live snapshot from the McDonald\u0027s nutrition calculator, including related serving-size variants. Meal bundles without fixed configurations are marked unavailable; values can change.",
     "items":  [
                   {
                       "id":  "203841",
@@ -13,7 +13,40 @@
                       "proteinGrams":  26,
                       "carbsGrams":  28,
                       "fatGrams":  30,
-                      "serving":  "10 Piece",
+                      "serving":  "10 piece",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203839",
+                      "name":  "Spicy Chicken McNuggets® (6 Piece)",
+                      "category":  "Spicy Chicken McNuggets®",
+                      "calories":  290,
+                      "proteinGrams":  15,
+                      "carbsGrams":  17,
+                      "fatGrams":  18,
+                      "serving":  "6 piece",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203836",
+                      "name":  "Spicy Chicken Mcnuggets (20 Piece)",
+                      "category":  "Spicy Chicken McNuggets®",
+                      "calories":  980,
+                      "proteinGrams":  52,
+                      "carbsGrams":  56,
+                      "fatGrams":  61,
+                      "serving":  "20 piece",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203838",
+                      "name":  "Spicy Chicken Mcnuggets (40 Piece)",
+                      "category":  "Spicy Chicken McNuggets®",
+                      "calories":  1950,
+                      "proteinGrams":  103,
+                      "carbsGrams":  112,
+                      "fatGrams":  122,
+                      "serving":  "40 piece",
                       "status":  "ok"
                   },
                   {
@@ -118,12 +151,34 @@
                   {
                       "id":  "200543",
                       "name":  "Coffee (Medium)",
-                      "category":  "McValue®",
+                      "category":  "McCafé®",
                       "calories":  10,
                       "proteinGrams":  1,
                       "carbsGrams":  1,
                       "fatGrams":  0,
                       "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200020",
+                      "name":  "Coffee (Small)",
+                      "category":  "McCafé®",
+                      "calories":  5,
+                      "proteinGrams":  0,
+                      "carbsGrams":  1,
+                      "fatGrams":  0,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200122",
+                      "name":  "Coffee (Large)",
+                      "category":  "McCafé®",
+                      "calories":  10,
+                      "proteinGrams":  1,
+                      "carbsGrams":  2,
+                      "fatGrams":  0,
+                      "serving":  "Large",
                       "status":  "ok"
                   },
                   {
@@ -160,6 +215,50 @@
                       "status":  "ok"
                   },
                   {
+                      "id":  "200574",
+                      "name":  "Chicken McNuggets® (6 piece)",
+                      "category":  "McValue®",
+                      "calories":  250,
+                      "proteinGrams":  14,
+                      "carbsGrams":  15,
+                      "fatGrams":  15,
+                      "serving":  "6 piece",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200567",
+                      "name":  "Chicken McNuggets 10 piece",
+                      "category":  "McValue®",
+                      "calories":  410,
+                      "proteinGrams":  23,
+                      "carbsGrams":  26,
+                      "fatGrams":  24,
+                      "serving":  "10 piece",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200573",
+                      "name":  "Chicken McNuggets (20 piece)",
+                      "category":  "McValue®",
+                      "calories":  830,
+                      "proteinGrams":  46,
+                      "carbsGrams":  51,
+                      "fatGrams":  49,
+                      "serving":  "20 piece",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200577",
+                      "name":  "Chicken McNuggets (40 piece)",
+                      "category":  "McValue®",
+                      "calories":  1650,
+                      "proteinGrams":  92,
+                      "carbsGrams":  102,
+                      "fatGrams":  98,
+                      "serving":  "40 piece",
+                      "status":  "ok"
+                  },
+                  {
                       "id":  "200066",
                       "name":  "Small French Fries",
                       "category":  "McValue®",
@@ -167,7 +266,40 @@
                       "proteinGrams":  3,
                       "carbsGrams":  31,
                       "fatGrams":  11,
-                      "serving":  "Standard ingredients",
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200092",
+                      "name":  "Kids Fries",
+                      "category":  "McValue®",
+                      "calories":  110,
+                      "proteinGrams":  2,
+                      "carbsGrams":  14,
+                      "fatGrams":  5,
+                      "serving":  "Kids",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "201234",
+                      "name":  "Medium French Fries",
+                      "category":  "McValue®",
+                      "calories":  320,
+                      "proteinGrams":  5,
+                      "carbsGrams":  43,
+                      "fatGrams":  15,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200083",
+                      "name":  "Large French Fries",
+                      "category":  "McValue®",
+                      "calories":  480,
+                      "proteinGrams":  7,
+                      "carbsGrams":  65,
+                      "fatGrams":  23,
+                      "serving":  "Large",
                       "status":  "ok"
                   },
                   {
@@ -178,7 +310,7 @@
                       "proteinGrams":  0,
                       "carbsGrams":  70,
                       "fatGrams":  0,
-                      "serving":  "Medium",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -288,7 +420,7 @@
                       "proteinGrams":  34,
                       "carbsGrams":  57,
                       "fatGrams":  35,
-                      "serving":  "Standard ingredients",
+                      "serving":  "Small",
                       "status":  "ok"
                   },
                   {
@@ -376,7 +508,29 @@
                       "proteinGrams":  6,
                       "carbsGrams":  64,
                       "fatGrams":  4.5,
-                      "serving":  "Standard ingredients",
+                      "serving":  "Master",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200370",
+                      "name":  "Oatmeal Fruit \u0026 Maple pkt",
+                      "category":  "Breakfast",
+                      "calories":  100,
+                      "proteinGrams":  1,
+                      "carbsGrams":  21,
+                      "fatGrams":  1.5,
+                      "serving":  "Child",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200371",
+                      "name":  "Fruit \u0026 Maple Oatmeal without Brown Sugar",
+                      "category":  "Breakfast",
+                      "calories":  270,
+                      "proteinGrams":  6,
+                      "carbsGrams":  51,
+                      "fatGrams":  4,
+                      "serving":  "Child",
                       "status":  "ok"
                   },
                   {
@@ -651,7 +805,7 @@
                       "proteinGrams":  31,
                       "carbsGrams":  24,
                       "fatGrams":  20,
-                      "serving":  "3 Piece",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -732,6 +886,28 @@
                       "status":  "ok"
                   },
                   {
+                      "id":  "200052",
+                      "name":  "Chocolate Shake (Medium)",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  650,
+                      "proteinGrams":  15,
+                      "carbsGrams":  107,
+                      "fatGrams":  17,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200058",
+                      "name":  "Chocolate Shake (Large)",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  800,
+                      "proteinGrams":  18,
+                      "carbsGrams":  134,
+                      "fatGrams":  20,
+                      "serving":  "Large",
+                      "status":  "ok"
+                  },
+                  {
                       "id":  "200108",
                       "name":  "Vanilla Shake (Small)",
                       "category":  "Sweets \u0026 Treats",
@@ -743,6 +919,28 @@
                       "status":  "ok"
                   },
                   {
+                      "id":  "200623",
+                      "name":  "Vanilla Shake (Medium)",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  570,
+                      "proteinGrams":  12,
+                      "carbsGrams":  97,
+                      "fatGrams":  15,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200624",
+                      "name":  "Vanilla Shake (Large)",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  780,
+                      "proteinGrams":  17,
+                      "carbsGrams":  133,
+                      "fatGrams":  19,
+                      "serving":  "Large",
+                      "status":  "ok"
+                  },
+                  {
                       "id":  "200109",
                       "name":  "Strawberry Shake (Small)",
                       "category":  "Sweets \u0026 Treats",
@@ -751,6 +949,28 @@
                       "carbsGrams":  77,
                       "fatGrams":  13,
                       "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200621",
+                      "name":  "Strawberry Shake (Medium)",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  600,
+                      "proteinGrams":  13,
+                      "carbsGrams":  99,
+                      "fatGrams":  16,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200622",
+                      "name":  "Strawberry Shake (Large)",
+                      "category":  "Sweets \u0026 Treats",
+                      "calories":  850,
+                      "proteinGrams":  19,
+                      "carbsGrams":  143,
+                      "fatGrams":  21,
+                      "serving":  "Large",
                       "status":  "ok"
                   },
                   {
@@ -805,7 +1025,7 @@
                       "proteinGrams":  1,
                       "carbsGrams":  25,
                       "fatGrams":  5,
-                      "serving":  "Small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -816,7 +1036,7 @@
                       "proteinGrams":  1,
                       "carbsGrams":  1,
                       "fatGrams":  0,
-                      "serving":  "small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -827,7 +1047,7 @@
                       "proteinGrams":  2,
                       "carbsGrams":  23,
                       "fatGrams":  5,
-                      "serving":  "small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -838,18 +1058,7 @@
                       "proteinGrams":  1,
                       "carbsGrams":  25,
                       "fatGrams":  5,
-                      "serving":  "small",
-                      "status":  "ok"
-                  },
-                  {
-                      "id":  "200020",
-                      "name":  "Coffee (Small)",
-                      "category":  "McCafé®",
-                      "calories":  5,
-                      "proteinGrams":  0,
-                      "carbsGrams":  1,
-                      "fatGrams":  0,
-                      "serving":  "Small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -860,7 +1069,7 @@
                       "proteinGrams":  1,
                       "carbsGrams":  1,
                       "fatGrams":  0,
-                      "serving":  "Small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -871,7 +1080,29 @@
                       "proteinGrams":  2,
                       "carbsGrams":  0,
                       "fatGrams":  0,
-                      "serving":  "Small ",
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "202764",
+                      "name":  "Hot Tea (Medium)",
+                      "category":  "McCafé®",
+                      "calories":  10,
+                      "proteinGrams":  3,
+                      "carbsGrams":  0,
+                      "fatGrams":  0,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "202115",
+                      "name":  "Hot Tea (Large)",
+                      "category":  "McCafé®",
+                      "calories":  15,
+                      "proteinGrams":  3,
+                      "carbsGrams":  0,
+                      "fatGrams":  0,
+                      "serving":  "Large",
                       "status":  "ok"
                   },
                   {
@@ -882,7 +1113,7 @@
                       "proteinGrams":  11,
                       "carbsGrams":  51,
                       "fatGrams":  12,
-                      "serving":  "small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1018,6 +1249,28 @@
                       "status":  "ok"
                   },
                   {
+                      "id":  "200564",
+                      "name":  "Frappe Caramel (Medium)",
+                      "category":  "McCafé®",
+                      "calories":  490,
+                      "proteinGrams":  8,
+                      "carbsGrams":  70,
+                      "fatGrams":  20,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200464",
+                      "name":  "Frappe Caramel (Large)",
+                      "category":  "McCafé®",
+                      "calories":  650,
+                      "proteinGrams":  11,
+                      "carbsGrams":  94,
+                      "fatGrams":  26,
+                      "serving":  "Large",
+                      "status":  "ok"
+                  },
+                  {
                       "id":  "200148",
                       "name":  "Frappe Mocha (Small)",
                       "category":  "McCafé®",
@@ -1026,6 +1279,28 @@
                       "carbsGrams":  61,
                       "fatGrams":  17,
                       "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200562",
+                      "name":  "Frappe Mocha (Medium)",
+                      "category":  "McCafé®",
+                      "calories":  490,
+                      "proteinGrams":  8,
+                      "carbsGrams":  72,
+                      "fatGrams":  20,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200563",
+                      "name":  "Frappe Mocha (Large)",
+                      "category":  "McCafé®",
+                      "calories":  660,
+                      "proteinGrams":  11,
+                      "carbsGrams":  97,
+                      "fatGrams":  26,
+                      "serving":  "Large",
                       "status":  "ok"
                   },
                   {
@@ -1040,6 +1315,28 @@
                       "status":  "ok"
                   },
                   {
+                      "id":  "203102",
+                      "name":  "Caramel Macchiato (Medium)",
+                      "category":  "McCafé®",
+                      "calories":  320,
+                      "proteinGrams":  11,
+                      "carbsGrams":  51,
+                      "fatGrams":  8,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203088",
+                      "name":  "Caramel Macchiato (Large)",
+                      "category":  "McCafé®",
+                      "calories":  400,
+                      "proteinGrams":  14,
+                      "carbsGrams":  62,
+                      "fatGrams":  10,
+                      "serving":  "Large",
+                      "status":  "ok"
+                  },
+                  {
                       "id":  "203275",
                       "name":  "Iced Caramel Macchiato (Small)",
                       "category":  "McCafé®",
@@ -1051,6 +1348,28 @@
                       "status":  "ok"
                   },
                   {
+                      "id":  "203098",
+                      "name":  "Iced Caramel Macchiato (Medium)",
+                      "category":  "McCafé®",
+                      "calories":  240,
+                      "proteinGrams":  8,
+                      "carbsGrams":  41,
+                      "fatGrams":  6,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "203109",
+                      "name":  "Iced Caramel Macchiato (Large)",
+                      "category":  "McCafé®",
+                      "calories":  360,
+                      "proteinGrams":  12,
+                      "carbsGrams":  59,
+                      "fatGrams":  9,
+                      "serving":  "Large",
+                      "status":  "ok"
+                  },
+                  {
                       "id":  "204201",
                       "name":  "Mocha (small)",
                       "category":  "McCafé®",
@@ -1058,7 +1377,7 @@
                       "proteinGrams":  8,
                       "carbsGrams":  45,
                       "fatGrams":  9,
-                      "serving":  "small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1069,7 +1388,7 @@
                       "proteinGrams":  7,
                       "carbsGrams":  39,
                       "fatGrams":  10,
-                      "serving":  "small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1080,7 +1399,7 @@
                       "proteinGrams":  8,
                       "carbsGrams":  13,
                       "fatGrams":  7,
-                      "serving":  "small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1091,7 +1410,7 @@
                       "proteinGrams":  9,
                       "carbsGrams":  39,
                       "fatGrams":  7,
-                      "serving":  "small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1102,7 +1421,7 @@
                       "proteinGrams":  8,
                       "carbsGrams":  41,
                       "fatGrams":  6,
-                      "serving":  "small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1113,7 +1432,7 @@
                       "proteinGrams":  5,
                       "carbsGrams":  8,
                       "fatGrams":  4,
-                      "serving":  "small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1124,7 +1443,7 @@
                       "proteinGrams":  6,
                       "carbsGrams":  28,
                       "fatGrams":  4.5,
-                      "serving":  "small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1139,6 +1458,28 @@
                       "status":  "ok"
                   },
                   {
+                      "id":  "200501",
+                      "name":  "Cappuccino (Medium)",
+                      "category":  "McCafé®",
+                      "calories":  160,
+                      "proteinGrams":  9,
+                      "carbsGrams":  14,
+                      "fatGrams":  7,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200502",
+                      "name":  "Cappuccino (Large)",
+                      "category":  "McCafé®",
+                      "calories":  200,
+                      "proteinGrams":  11,
+                      "carbsGrams":  18,
+                      "fatGrams":  10,
+                      "serving":  "Large",
+                      "status":  "ok"
+                  },
+                  {
                       "id":  "200186",
                       "name":  "Vanilla Cappuccino (Small)",
                       "category":  "McCafé®",
@@ -1147,6 +1488,28 @@
                       "carbsGrams":  37,
                       "fatGrams":  4.5,
                       "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200185",
+                      "name":  "Vanilla Cappuccino (Medium)",
+                      "category":  "McCafé®",
+                      "calories":  260,
+                      "proteinGrams":  7,
+                      "carbsGrams":  47,
+                      "fatGrams":  6,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200184",
+                      "name":  "French Vanilla Cappuccino (Large)",
+                      "category":  "McCafé®",
+                      "calories":  340,
+                      "proteinGrams":  9,
+                      "carbsGrams":  58,
+                      "fatGrams":  8,
+                      "serving":  "Large",
                       "status":  "ok"
                   },
                   {
@@ -1161,6 +1524,28 @@
                       "status":  "ok"
                   },
                   {
+                      "id":  "200386",
+                      "name":  "Caramel Cappuccino (Medium)",
+                      "category":  "McCafé®",
+                      "calories":  260,
+                      "proteinGrams":  8,
+                      "carbsGrams":  44,
+                      "fatGrams":  6,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200385",
+                      "name":  "Caramel Cappuccino (Large)",
+                      "category":  "McCafé®",
+                      "calories":  340,
+                      "proteinGrams":  11,
+                      "carbsGrams":  55,
+                      "fatGrams":  8,
+                      "serving":  "Large",
+                      "status":  "ok"
+                  },
+                  {
                       "id":  "202381",
                       "name":  "Espresso Americano Coffee (Small)",
                       "category":  "McCafé®",
@@ -1172,6 +1557,28 @@
                       "status":  "ok"
                   },
                   {
+                      "id":  "202383",
+                      "name":  "Espresso Americano Coffee (Medium)",
+                      "category":  "McCafé®",
+                      "calories":  5,
+                      "proteinGrams":  0,
+                      "carbsGrams":  1,
+                      "fatGrams":  0,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "202371",
+                      "name":  "Americano Coffee (Large)",
+                      "category":  "McCafé®",
+                      "calories":  5,
+                      "proteinGrams":  0,
+                      "carbsGrams":  1,
+                      "fatGrams":  0,
+                      "serving":  "Large",
+                      "status":  "ok"
+                  },
+                  {
                       "id":  "201677",
                       "name":  "Coca-Cola (Small) No Ice",
                       "category":  "Drinks",
@@ -1179,7 +1586,7 @@
                       "proteinGrams":  0,
                       "carbsGrams":  53,
                       "fatGrams":  0,
-                      "serving":  "Small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1194,6 +1601,39 @@
                       "status":  "ok"
                   },
                   {
+                      "id":  "200640",
+                      "name":  "Diet Coke (Extra Small)",
+                      "category":  "Drinks",
+                      "calories":  0,
+                      "proteinGrams":  0,
+                      "carbsGrams":  0,
+                      "fatGrams":  0,
+                      "serving":  "Extra Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200642",
+                      "name":  "Diet Coke (Medium)",
+                      "category":  "Drinks",
+                      "calories":  0,
+                      "proteinGrams":  0,
+                      "carbsGrams":  0,
+                      "fatGrams":  0,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200641",
+                      "name":  "Diet Coke (Large)",
+                      "category":  "Drinks",
+                      "calories":  0,
+                      "proteinGrams":  0,
+                      "carbsGrams":  1,
+                      "fatGrams":  0,
+                      "serving":  "Large",
+                      "status":  "ok"
+                  },
+                  {
                       "id":  "201711",
                       "name":  "Sprite (Small) No Ice",
                       "category":  "Drinks",
@@ -1201,7 +1641,7 @@
                       "proteinGrams":  0,
                       "carbsGrams":  49,
                       "fatGrams":  0,
-                      "serving":  "Small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1212,7 +1652,7 @@
                       "proteinGrams":  0,
                       "carbsGrams":  56,
                       "fatGrams":  0,
-                      "serving":  "Small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1223,7 +1663,7 @@
                       "proteinGrams":  0,
                       "carbsGrams":  52,
                       "fatGrams":  0,
-                      "serving":  "Small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1234,7 +1674,7 @@
                       "proteinGrams":  0,
                       "carbsGrams":  31,
                       "fatGrams":  0,
-                      "serving":  "16 Oz.",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1245,7 +1685,7 @@
                       "proteinGrams":  1,
                       "carbsGrams":  42,
                       "fatGrams":  0,
-                      "serving":  "Small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1257,6 +1697,39 @@
                       "carbsGrams":  0,
                       "fatGrams":  0,
                       "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200660",
+                      "name":  "Unsweetened Iced Tea (Extra Small)",
+                      "category":  "Drinks",
+                      "calories":  0,
+                      "proteinGrams":  1,
+                      "carbsGrams":  0,
+                      "fatGrams":  0,
+                      "serving":  "Extra Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200662",
+                      "name":  "Unsweetened Iced Tea (Medium)",
+                      "category":  "Drinks",
+                      "calories":  0,
+                      "proteinGrams":  1,
+                      "carbsGrams":  0,
+                      "fatGrams":  0,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200661",
+                      "name":  "Unsweetened Iced Tea (Large)",
+                      "category":  "Drinks",
+                      "calories":  0,
+                      "proteinGrams":  1,
+                      "carbsGrams":  0,
+                      "fatGrams":  0,
+                      "serving":  "Large",
                       "status":  "ok"
                   },
                   {
@@ -1304,6 +1777,28 @@
                       "status":  "ok"
                   },
                   {
+                      "id":  "200982",
+                      "name":  "Minute Maid Orange Juice (Small)",
+                      "category":  "Drinks",
+                      "calories":  150,
+                      "proteinGrams":  2,
+                      "carbsGrams":  36,
+                      "fatGrams":  0,
+                      "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200663",
+                      "name":  "Minute Maid Orange Juice (Large)",
+                      "category":  "Drinks",
+                      "calories":  270,
+                      "proteinGrams":  4,
+                      "carbsGrams":  65,
+                      "fatGrams":  0,
+                      "serving":  "Large",
+                      "status":  "ok"
+                  },
+                  {
                       "id":  "203082",
                       "name":  "Honest Kids Appley Ever After (Box 6 fl oz Drink Box)",
                       "category":  "Drinks",
@@ -1311,7 +1806,7 @@
                       "proteinGrams":  0,
                       "carbsGrams":  8,
                       "fatGrams":  0,
-                      "serving":  "Box 6 fl oz Drink Box",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1322,7 +1817,7 @@
                       "proteinGrams":  0,
                       "carbsGrams":  15,
                       "fatGrams":  0,
-                      "serving":  "small",
+                      "serving":  "Standard ingredients",
                       "status":  "ok"
                   },
                   {
@@ -1337,6 +1832,28 @@
                       "status":  "ok"
                   },
                   {
+                      "id":  "202279",
+                      "name":  "Frozen Coca Cola Classic (Medium)",
+                      "category":  "Drinks",
+                      "calories":  80,
+                      "proteinGrams":  0,
+                      "carbsGrams":  21,
+                      "fatGrams":  0,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "202282",
+                      "name":  "Frozen Coca Cola Classic (Large)",
+                      "category":  "Drinks",
+                      "calories":  110,
+                      "proteinGrams":  0,
+                      "carbsGrams":  29,
+                      "fatGrams":  0,
+                      "serving":  "Large",
+                      "status":  "ok"
+                  },
+                  {
                       "id":  "201971",
                       "name":  "Frozen Fanta Blue Raspberry (Small)",
                       "category":  "Drinks",
@@ -1345,6 +1862,28 @@
                       "carbsGrams":  16,
                       "fatGrams":  0,
                       "serving":  "Small",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "201970",
+                      "name":  "Frozen Fanta Blue Raspberry (Medium)",
+                      "category":  "Drinks",
+                      "calories":  80,
+                      "proteinGrams":  0,
+                      "carbsGrams":  20,
+                      "fatGrams":  0,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "201972",
+                      "name":  "Frozen Fanta Blue Raspberry (Large)",
+                      "category":  "Drinks",
+                      "calories":  110,
+                      "proteinGrams":  0,
+                      "carbsGrams":  29,
+                      "fatGrams":  0,
+                      "serving":  "Large",
                       "status":  "ok"
                   },
                   {
@@ -1359,6 +1898,28 @@
                       "status":  "ok"
                   },
                   {
+                      "id":  "200565",
+                      "name":  "Strawberry Banana Smoothie (Medium)",
+                      "category":  "Drinks",
+                      "calories":  240,
+                      "proteinGrams":  3,
+                      "carbsGrams":  55,
+                      "fatGrams":  1,
+                      "serving":  "Medium",
+                      "status":  "ok"
+                  },
+                  {
+                      "id":  "200566",
+                      "name":  "Strawberry Banana Smoothie (Large)",
+                      "category":  "Drinks",
+                      "calories":  330,
+                      "proteinGrams":  4,
+                      "carbsGrams":  76,
+                      "fatGrams":  1,
+                      "serving":  "Large",
+                      "status":  "ok"
+                  },
+                  {
                       "id":  "200155",
                       "name":  "Mango Pineapple Smoothie (Small)",
                       "category":  "Drinks",
@@ -1370,24 +1931,24 @@
                       "status":  "ok"
                   },
                   {
-                      "id":  "200605",
-                      "name":  "Iced Coffee (Medium)",
-                      "category":  "McCafé®",
-                      "calories":  190,
-                      "proteinGrams":  2,
-                      "carbsGrams":  32,
-                      "fatGrams":  6,
+                      "id":  "200548",
+                      "name":  "Mango Pineapple Smoothie (Medium)",
+                      "category":  "Drinks",
+                      "calories":  250,
+                      "proteinGrams":  3,
+                      "carbsGrams":  57,
+                      "fatGrams":  1,
                       "serving":  "Medium",
                       "status":  "ok"
                   },
                   {
-                      "id":  "203882",
-                      "name":  "Iced Coffee (Large)",
-                      "category":  "McCafé®",
-                      "calories":  270,
-                      "proteinGrams":  2,
-                      "carbsGrams":  47,
-                      "fatGrams":  8,
+                      "id":  "200547",
+                      "name":  "Mango Pineapple Smoothie (Large)",
+                      "category":  "Drinks",
+                      "calories":  340,
+                      "proteinGrams":  4,
+                      "carbsGrams":  78,
+                      "fatGrams":  1,
                       "serving":  "Large",
                       "status":  "ok"
                   }
