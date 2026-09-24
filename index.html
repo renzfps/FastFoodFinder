@@ -93,6 +93,37 @@
         </div>
       </section>
 
+      <section class="results-section" id="results" hidden>
+        <div class="container">
+          <div class="results-header">
+            <div>
+              <button class="back-link" id="back-to-home" type="button">← Back to home</button>
+              <div class="eyebrow muted"><span class="eyebrow-dot"></span> McDonald's nutrition</div>
+              <h2>Choose your fit.</h2>
+              <p id="results-summary">All menu options, sorted by calories.</p>
+            </div>
+            <label class="sort-control" for="sort-by">Sort by
+              <select id="sort-by">
+                <option value="calories">Calories: low to high</option>
+                <option value="proteinGrams">Protein: high to low</option>
+                <option value="carbsGrams">Carbs: low to high</option>
+                <option value="fatGrams">Fat: low to high</option>
+              </select>
+            </label>
+          </div>
+          <form class="filter-panel" id="nutrition-filters">
+            <strong>Filter options</strong>
+            <label>Minimum protein (g)<input name="proteinGrams" type="number" min="0" step="1" placeholder="15" /></label>
+            <label>Maximum calories<input name="calories" type="number" min="0" step="10" placeholder="500" /></label>
+            <label>Maximum carbs (g)<input name="carbsGrams" type="number" min="0" step="1" /></label>
+            <label>Maximum fat (g)<input name="fatGrams" type="number" min="0" step="1" /></label>
+            <button class="filter-submit" id="apply-filters" type="button">Apply filters</button>
+            <button class="filter-clear" id="clear-filters" type="button">Clear</button>
+          </form>
+          <div class="results-grid" id="results-grid"></div>
+        </div>
+      </section>
+
       <section class="feature-section" id="how-it-works">
         <div class="container">
           <div class="section-heading">
