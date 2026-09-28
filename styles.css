@@ -90,12 +90,23 @@ h1 em { color: var(--coral); font-style: normal; }
 .trust-stat strong { color: var(--green); font-weight: 700; }
 
 .feature-section { padding: 95px 0 106px; background: var(--cream); }
+.recommendations-section { padding: 95px 0 106px; background: #edf6ef; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 50px; }
 .eyebrow.muted { color: #7e8a86; }
 h2 { margin: 17px 0 0; color: var(--green-dark); font: 800 39px/1.15 "Plus Jakarta Sans", sans-serif; letter-spacing: -2px; }
 h2 span { color: var(--coral); }
 .section-heading > p { max-width: 245px; margin-bottom: 5px; color: var(--muted); font-size: 13px; line-height: 1.65; }
 .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.recommendations-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.recommendation-card { display: flex; min-height: 224px; flex-direction: column; justify-content: space-between; padding: 20px; border: 1px solid #d5e6d9; border-radius: 11px; background: rgba(255,255,255,.72); }
+.recommendation-rank { color: var(--coral); font-size: 11px; font-weight: 800; letter-spacing: 1px; }
+.recommendation-category { color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; }
+.recommendation-card h3 { margin: 9px 0 5px; color: var(--green-dark); font: 700 16px/1.3 "Plus Jakarta Sans", sans-serif; }
+.recommendation-serving { color: var(--muted); font-size: 10px; }
+.recommendation-macros { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding-top: 14px; border-top: 1px solid #dcebe0; }
+.recommendation-macros div { display: flex; flex-direction: column; gap: 3px; }
+.recommendation-macros strong { color: var(--green); font-size: 16px; }
+.recommendation-macros small { color: var(--muted); font-size: 9px; }
 .feature-card { position: relative; min-height: 264px; padding: 27px 29px; border: 1px solid var(--line); border-radius: 11px; background: rgba(255,255,255,.38); }
 .feature-card.featured { border-color: transparent; background: var(--green); box-shadow: 0 17px 35px rgba(29,90,77,.18); }
 .feature-icon { display: grid; width: 39px; height: 39px; place-items: center; margin-bottom: 26px; border-radius: 50%; font-size: 22px; }
@@ -170,6 +181,7 @@ h2 span { color: var(--coral); }
   .section-heading, .restaurant-wrap { display: block; }
   .section-heading > p { margin-top: 20px; }
   .feature-grid { grid-template-columns: 1fr; }
+  .recommendations-grid { grid-template-columns: repeat(2, 1fr); }
   .feature-card { min-height: 220px; }
   .restaurant-list { width: 100%; margin-top: 35px; }
   .results-header { display: block; }
@@ -190,6 +202,7 @@ h2 span { color: var(--coral); }
   h2 { font-size: 33px; }
   .restaurant-section { padding: 60px 0; }
   .restaurant-list { grid-template-columns: 1fr; }
+  .recommendations-grid { grid-template-columns: 1fr; }
   .results-section { padding-top: 105px; }
   .filter-panel label { width: 100%; }
   .filter-submit, .filter-clear { flex: 1; }
