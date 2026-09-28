@@ -3,10 +3,17 @@ const searchInput = document.querySelector("#search-input");
 const toast = document.querySelector("#toast");
 const menuItems = (window.FASTFOODFINDER_DATA?.items ?? [])
   .filter((item) => item.status === "ok");
+const recommendationImages = {
+  "204386": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202605_25157_3PieceMcCrispyStrips_Protein_1564x1564:nutrition-calculator-tile?resmode=sharp2",
+  "200486": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202302_0004-999_DoubleCheeseburgerv2_Alt_1564x1564:nutrition-calculator-tile?resmode=sharp2",
+  "200491": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202302_0592-999_McDouble_Alt_Protein_1564x1564:nutrition-calculator-tile?resmode=sharp2",
+  "200567": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/newsroom/menu-items-2023/NR_202208_5280_10McNuggets_Stacked_2000x2000.png",
+  "203747": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202012_0383_CrispyChickenSandwich_PotatoBun_1564x1564-1:nutrition-calculator-tile?resmode=sharp2"
+};
 const recommendedItems = menuItems
   .filter((item) => item.calories <= 500 && item.proteinGrams >= 20)
   .sort((a, b) => (b.proteinGrams / b.calories) - (a.proteinGrams / a.calories))
-  .slice(0, 8);
+  .slice(0, 5);
 const resultsSection = document.querySelector("#results");
 const resultsGrid = document.querySelector("#results-grid");
 const recommendationsGrid = document.querySelector("#recommendations-grid");
@@ -32,11 +39,18 @@ function escapeHtml(value) {
 function renderRecommendations() {
   recommendationsGrid.innerHTML = recommendedItems.map((item, index) => `
     <article class="recommendation-card">
-      <div class="recommendation-rank">0${index + 1}</div>
-      <div>
+      <div class="recommendation-image${item.id === "204386" ? " has-image-callout" : item.id === "200491" ? " has-protein-callout" : ""}">
+        <img src="${recommendationImages[item.id]}" alt="${escapeHtml(item.name)}" loading="lazy" decoding="async" />
+        <div class="recommendation-protein-badge">
+          <span>Protein</span>
+          <strong>${item.proteinGrams}g</strong>
+        </div>
+      </div>
+      <div class="recommendation-content">
+        <div class="recommendation-rank">RECOMMENDATION 0${index + 1}</div>
         <span class="recommendation-category">${escapeHtml(item.category)}</span>
         <h3>${escapeHtml(item.name)}</h3>
-        <span class="recommendation-serving">${escapeHtml(item.serving || "Standard")}</span>
+        ${item.serving && item.serving !== "Standard ingredients" ? `<span class="recommendation-serving">${escapeHtml(item.serving)}</span>` : ""}
       </div>
       <div class="recommendation-macros">
         <div><strong>${item.calories}</strong><small>calories</small></div>
