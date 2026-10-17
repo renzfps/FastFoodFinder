@@ -45,7 +45,13 @@ const recommendationImages = {
   "200486": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202302_0004-999_DoubleCheeseburgerv2_Alt_1564x1564:nutrition-calculator-tile?resmode=sharp2",
   "200491": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202302_0592-999_McDouble_Alt_Protein_1564x1564:nutrition-calculator-tile?resmode=sharp2",
   "200567": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/newsroom/menu-items-2023/NR_202208_5280_10McNuggets_Stacked_2000x2000.png",
-  "203747": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202012_0383_CrispyChickenSandwich_PotatoBun_1564x1564-1:nutrition-calculator-tile?resmode=sharp2"
+  "203747": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202012_0383_CrispyChickenSandwich_PotatoBun_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
+  // Taco Bell: official square menu tiles from tacobell.com/food
+  "tb-3-cheese-chicken-flatbread-melt": "https://www.tacobell.com/images/23499_new_3_cheese_chicken_flatbread_melt_269x269.jpg",
+  "tb-breakfast-quesadilla-steak": "https://www.tacobell.com/images/30153_breakfast_quesadilla_steak_269x269.jpg",
+  // Chipotle: product shots from chipotle.com/high-protein-meals (no steak taco photo exists, so the taco uses Chipotle's High Protein Taco shot)
+  "cmg-high-protein-low-calorie-bowl": "https://www.chipotle.com/content/dam/chipotle/menu-item-campaigns/high-protein/2025/lp-pces/updated-final-specs/1608x1068%20Mobile%20LP%20HP%20LC.png",
+  "cmg-steak-tacos-3-crispy": "https://www.chipotle.com/content/dam/chipotle/menu-item-campaigns/high-protein/2025/lp-pces/updated-final-specs/1608x1068%20Mobile%20LP%20%20LP%20Abodo%20Chicken%20Taco.png"
 };
 
 // ------------------------------------------------------------------ Data layer
