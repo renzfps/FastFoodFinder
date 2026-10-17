@@ -10,11 +10,13 @@ Most fast food chains publish nutrition data, but each one formats it differentl
 
 ## Features
 
-- **Search** by restaurant, item or both ("chipotle chicken", "taco bell", "nuggets").
+- **Search** by restaurant, item or both ("chipotle chicken", "taco bell", "nuggets"). Suggestions appear as you type and work with the arrow keys and Enter. Press `/` to jump to search.
 - **Restaurant tabs** with live item counts.
 - **Quick goals**: High protein, Under 500 cal, Low carb, Low fat. Goals stack with your own limits; the stricter value wins.
-- **Live filters**: min protein, max calories, max carbs, max fat, category, and a "Meals only" switch that hides drinks, desserts and single add-ons.
+- **Live filters**: min protein, max calories, max carbs, max fat, category, and a "Meals only" switch that hides drinks, desserts, sauces and single add-ons.
 - **Sorting** by protein per calorie, calories, protein, carbs, fat or name.
+- **Removable filter tags** and a **Reset all** button that clears search, filters and sort in one click.
+- **Shareable results**: search, filters and sort are kept in the page address, so refresh, the browser Back button and copied links all return to the same list.
 - **Item details** with a calorie breakdown (protein / carbs / fat) and the data source.
 - **Compare** up to three items side by side, with the best value in each row highlighted.
 - Responsive layout for phones and desktops.

@@ -88,8 +88,12 @@ function proteinPer100(item) {
   return item.calories > 0 ? (item.proteinGrams / item.calories) * 100 : 0;
 }
 
+// Small condiments such as "Mighty Hot Sauce" or "Fresh Tomato Salsa" are not meals either.
+const CONDIMENT_NAME = /(sauce|salsa|dressing|ketchup)$/i;
+
 function isMeal(item) {
-  return !NON_MEAL_CATEGORIES.has(item.category);
+  if (NON_MEAL_CATEGORIES.has(item.category)) return false;
+  return !(CONDIMENT_NAME.test(item.name.trim()) && item.calories < 100);
 }
 
 // Splits a free-text search into a restaurant (if one is named) and the rest of the words.
@@ -156,6 +160,8 @@ function combinedFilters() {
 
 // ---------------------------------------------------------------------- State
 
+const DEFAULT_SORT = "proteinDensity";
+
 const state = {
   restaurantId: "all",
   text: "",
@@ -163,7 +169,7 @@ const state = {
   mealsOnly: true,
   goals: new Set(),
   customFilters: {},
-  sort: "proteinDensity",
+  sort: DEFAULT_SORT,
   visible: PAGE_SIZE,
   compare: []
 };
@@ -193,8 +199,12 @@ const itemDialog = $("#item-dialog");
 const compareTray = $("#compare-tray");
 const compareDialog = $("#compare-dialog");
 const homeSections = [".hero", ".recommendations-section", ".feature-section", ".restaurant-section"].map((s) => $(s));
+const suggestionsList = $("#search-suggestions");
 let toastTimer;
-let filterTimer;
+let queryTimer;
+let limitsTimer;
+let suggestTimer;
+let activeSuggestion = -1;
 
 // ----------------------------------------------------------------- Rendering
 
@@ -224,8 +234,10 @@ function itemTags(item) {
   return tags.map(([label, className]) => `<span class="item-tag ${className}">${label}</span>`).join("");
 }
 
+// Hide the serving when it is missing or already part of the name, like "Diet Coke (Small)".
 function servingLabel(item) {
-  return item.serving && item.serving !== "Standard ingredients" ? item.serving : "";
+  if (!item.serving || item.serving === "Standard ingredients") return "";
+  return normalize(item.name).includes(normalize(item.serving)) ? "" : item.serving;
 }
 
 function renderStats() {
@@ -336,11 +348,14 @@ function resultCard(item) {
         <span class="result-name">${escapeHtml(item.name)}</span>
         ${serving ? `<span class="result-serving">${escapeHtml(serving)}</span>` : ""}
         <span class="result-tags">${itemTags(item)}</span>
-        <span class="result-macros">
-          <span class="macro-calories"><strong>${item.calories}</strong><small>calories</small></span>
-          <span><strong>${item.proteinGrams}g</strong><small>protein</small></span>
-          <span><strong>${item.carbsGrams}g</strong><small>carbs</small></span>
-          <span><strong>${item.fatGrams}g</strong><small>fat</small></span>
+        <span class="result-nutrition">
+          <span class="result-calories"><strong>${item.calories}</strong><small>calories</small></span>
+          <span class="mini-split" aria-hidden="true">${macroSplit(item).map(([name, share]) => `<span class="split-${name}" style="width:${(share * 100).toFixed(1)}%"></span>`).join("")}</span>
+          <span class="result-macros">
+            <span><small><i class="split-protein"></i>Protein</small><strong>${item.proteinGrams}g</strong></span>
+            <span><small><i class="split-carbs"></i>Carbs</small><strong>${item.carbsGrams}g</strong></span>
+            <span><small><i class="split-fat"></i>Fat</small><strong>${item.fatGrams}g</strong></span>
+          </span>
         </span>
       </button>
       <div class="result-footer">
@@ -376,6 +391,7 @@ function renderResults() {
         </div>
       </div>`;
   }
+  $("#apply-filters-mobile").textContent = results.length ? `Show ${results.length} item${results.length === 1 ? "" : "s"}` : "No matches yet";
   loadMoreButton.hidden = shown.length >= results.length;
   loadMoreButton.textContent = `Show ${Math.min(PAGE_SIZE, results.length - shown.length)} more`;
   renderActiveFilters();
@@ -388,6 +404,65 @@ function refresh({ resetPage = true } = {}) {
   renderGoalChips();
   renderResults();
   renderCompareTray();
+  saveStateToUrl();
+}
+
+// ------------------------------------------------------------- URL state
+// The results view keeps its search, filters and sort in the address bar, so a
+// refresh, a shared link or the browser Back button returns to the same list.
+
+function stateToParams() {
+  const params = new URLSearchParams({ view: "results" });
+  if (state.restaurantId !== "all") params.set("restaurant", state.restaurantId);
+  if (state.text) params.set("q", state.text);
+  if (state.category) params.set("category", state.category);
+  if (!state.mealsOnly) params.set("everything", "1");
+  if (state.goals.size) params.set("goals", [...state.goals].join(","));
+  Object.entries(state.customFilters).forEach(([field, value]) => params.set(field, value));
+  if (state.sort !== DEFAULT_SORT) params.set("sort", state.sort);
+  return params;
+}
+
+function writeUrl(search, push) {
+  const url = `${window.location.pathname}${search ? `?${search}` : ""}`;
+  if (url === `${window.location.pathname}${window.location.search}`) return;
+  try {
+    window.history[push ? "pushState" : "replaceState"](null, "", url);
+  } catch {
+    // Some browsers block history changes on file:// pages. The app still works without it.
+  }
+}
+
+function saveStateToUrl() {
+  if (!resultsSection.hidden) writeUrl(stateToParams().toString(), false);
+}
+
+function readStateFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("view") !== "results") return false;
+  const restaurantId = params.get("restaurant");
+  state.restaurantId = RESTAURANTS[restaurantId] ? restaurantId : "all";
+  state.text = normalize(params.get("q") ?? "");
+  state.category = params.get("category") ?? "";
+  state.mealsOnly = params.get("everything") !== "1";
+  state.goals = new Set((params.get("goals") ?? "").split(",").filter((goal) => GOAL_PRESETS[goal]));
+  state.customFilters = {};
+  Object.keys(FILTER_FIELDS).forEach((field) => {
+    const value = Number(params.get(field));
+    if (params.has(field) && params.get(field) !== "" && value >= 0) state.customFilters[field] = value;
+  });
+  state.sort = SORTS[params.get("sort")] ? params.get("sort") : DEFAULT_SORT;
+  return true;
+}
+
+// Puts the form controls back in line with state (after a reset or a Back press).
+function syncControls() {
+  resultsQuery.value = state.text;
+  mealsOnlyToggle.checked = state.mealsOnly;
+  sortBy.value = state.sort;
+  Object.keys(FILTER_FIELDS).forEach((field) => {
+    filtersForm.elements[field].value = state.customFilters[field] ?? "";
+  });
 }
 
 function macroSplit(item) {
@@ -495,19 +570,23 @@ function openCompare() {
 
 // --------------------------------------------------------------- Navigation
 
-function showResults() {
+function showResults({ push = true } = {}) {
+  closeSuggestions();
+  const wasHidden = resultsSection.hidden;
   homeSections.forEach((section) => { section.hidden = true; });
   resultsSection.hidden = false;
-  resultsQuery.value = state.text;
+  syncControls();
+  if (push && wasHidden) writeUrl(stateToParams().toString(), true);
   refresh();
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: wasHidden ? "auto" : "smooth" });
 }
 
-function showHome() {
+function showHome({ push = true, scroll = true } = {}) {
   resultsSection.hidden = true;
   compareTray.hidden = true;
   homeSections.forEach((section) => { section.hidden = false; });
-  $("#discover").scrollIntoView({ behavior: "smooth" });
+  if (push) writeUrl("", true);
+  if (scroll) $("#discover").scrollIntoView({ behavior: "smooth" });
 }
 
 function submitSearch(value) {
@@ -527,21 +606,23 @@ function submitSearch(value) {
   state.restaurantId = restaurantId;
   state.text = text;
   state.category = "";
+  state.goals.clear();
+  state.customFilters = {};
   // A specific search like "coke" should not be hidden by "Meals only".
   state.mealsOnly = text ? menuItems.some((item) => isMeal(item) && inScope(item)) : true;
-  mealsOnlyToggle.checked = state.mealsOnly;
   showResults();
 }
 
+// "Reset all" puts search, filters, the meals switch and the sort back to their defaults.
+// The restaurant tab stays, since that is where the person chose to look.
 function clearAll() {
   state.text = "";
   state.category = "";
   state.goals.clear();
   state.customFilters = {};
   state.mealsOnly = true;
-  mealsOnlyToggle.checked = true;
-  resultsQuery.value = "";
-  filtersForm.reset();
+  state.sort = DEFAULT_SORT;
+  syncControls();
   refresh();
 }
 
@@ -562,6 +643,7 @@ function removeFilter(key) {
 
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
+  closeSuggestions();
   submitSearch(searchInput.value);
 });
 
@@ -573,13 +655,21 @@ document.querySelectorAll("[data-search]").forEach((button) => {
 });
 
 resultsQuery.addEventListener("input", () => {
-  window.clearTimeout(filterTimer);
-  filterTimer = window.setTimeout(() => {
+  window.clearTimeout(queryTimer);
+  queryTimer = window.setTimeout(() => {
     const { restaurantId, text } = parseSearch(resultsQuery.value);
     if (restaurantId !== "all") state.restaurantId = restaurantId;
     state.text = text;
     refresh();
   }, 160);
+});
+
+resultsQuery.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape" || !resultsQuery.value) return;
+  event.preventDefault();
+  resultsQuery.value = "";
+  state.text = "";
+  refresh();
 });
 
 restaurantTabs.addEventListener("click", (event) => {
@@ -610,8 +700,8 @@ goalChips.addEventListener("click", (event) => {
 // Typed limits apply as you type (short debounce), no "Apply" button needed.
 filtersForm.addEventListener("input", (event) => {
   if (!FILTER_FIELDS[event.target.name]) return;
-  window.clearTimeout(filterTimer);
-  filterTimer = window.setTimeout(() => {
+  window.clearTimeout(limitsTimer);
+  limitsTimer = window.setTimeout(() => {
     state.customFilters = Object.fromEntries([...new FormData(filtersForm)]
       .filter(([field, value]) => FILTER_FIELDS[field] && value !== "" && Number(value) >= 0)
       .map(([field, value]) => [field, Number(value)]));
@@ -621,6 +711,13 @@ filtersForm.addEventListener("input", (event) => {
 filtersForm.addEventListener("submit", (event) => event.preventDefault());
 
 $("#clear-filters").addEventListener("click", clearAll);
+
+// Phone layout: the filter panel covers the list, so this button closes it and jumps to the results.
+$("#apply-filters-mobile").addEventListener("click", () => {
+  filtersForm.classList.remove("open");
+  $("#toggle-filters").setAttribute("aria-expanded", "false");
+  $(".results-main").scrollIntoView({ behavior: "smooth", block: "start" });
+});
 
 // On small screens the filter panel starts collapsed behind a "Filters" button.
 $("#toggle-filters").addEventListener("click", (event) => {
@@ -685,9 +782,170 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
+// Browser Back/Forward moves between the home page and earlier result lists.
+window.addEventListener("popstate", () => {
+  [itemDialog, compareDialog].forEach((dialog) => { if (dialog.open) dialog.close(); });
+  if (readStateFromUrl()) showResults({ push: false });
+  else if (!resultsSection.hidden) showHome({ push: false });
+});
+
+// Press "/" anywhere to jump to the search box that is on screen.
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "/" || event.ctrlKey || event.metaKey || event.altKey) return;
+  if (event.target.closest("input, select, textarea") || document.querySelector("dialog[open]")) return;
+  event.preventDefault();
+  (resultsSection.hidden ? searchInput : resultsQuery).focus();
+});
+
+// ---------------------------------------------------------- Search suggestions
+// As you type in the home search box, a short list shows matching restaurants and
+// the best-fitting menu items, so most searches never need the Search button.
+
+function buildSuggestions(query) {
+  const { restaurantId, text } = parseSearch(query);
+  const typed = normalize(query);
+  if (!typed) return [];
+  const suggestions = [];
+
+  Object.entries(RESTAURANTS).forEach(([id, restaurant]) => {
+    if (!restaurantMeta[id]) return;
+    if (restaurantId === id) {
+      // A full restaurant name was typed, maybe with words like "taco bell chicken".
+      const count = menuItems.filter((item) => item.restaurantId === id && matchesText(item, text)).length;
+      if (count) suggestions.push({ type: "restaurant", id, text, label: text ? `“${text}” at ${restaurant.name}` : `All of ${restaurant.name}`, count });
+    } else if (restaurantId === "all" && [restaurant.name, ...restaurant.aliases].some((alias) => normalize(alias).startsWith(typed))) {
+      // Part of a restaurant name was typed, like "chip" or "taco".
+      const count = menuItems.filter((item) => item.restaurantId === id).length;
+      suggestions.push({ type: "restaurant", id, text: "", label: `All of ${restaurant.name}`, count });
+    }
+  });
+
+  const inScope = menuItems.filter((item) => (restaurantId === "all" || item.restaurantId === restaurantId) && matchesText(item, text));
+  if (!text && restaurantId !== "all") return suggestions;
+
+  // Names that start with what was typed come first, then names that contain it, then meals before drinks, then the best protein value.
+  const nameHas = (item) => text.split(" ").every((word) => normalize(item.name).includes(word));
+  const ranked = [...inScope].sort((a, b) => (
+    (normalize(b.name).startsWith(text) - normalize(a.name).startsWith(text))
+    || (nameHas(b) - nameHas(a))
+    || (isMeal(b) - isMeal(a))
+    || (proteinPer100(b) - proteinPer100(a))
+  ));
+  ranked.slice(0, 5).forEach((item) => suggestions.push({ type: "item", item }));
+  if (inScope.length) suggestions.push({ type: "all", label: `See all ${inScope.length} result${inScope.length === 1 ? "" : "s"} for “${query.trim()}”` });
+  return suggestions;
+}
+
+let currentSuggestions = [];
+
+function renderSuggestions() {
+  currentSuggestions = buildSuggestions(searchInput.value);
+  activeSuggestion = -1;
+  if (!currentSuggestions.length) {
+    closeSuggestions();
+    return;
+  }
+  suggestionsList.innerHTML = currentSuggestions.map((suggestion, index) => {
+    if (suggestion.type === "item") {
+      const { item } = suggestion;
+      return `<li role="option" id="suggestion-${index}" class="suggestion" data-index="${index}" aria-selected="false">
+        <span class="mini-logo ${RESTAURANTS[item.restaurantId].className}" aria-hidden="true">${RESTAURANTS[item.restaurantId].logo}</span>
+        <span class="suggestion-text"><strong>${escapeHtml(item.name)}</strong><small>${escapeHtml(item.restaurant)} · ${escapeHtml(item.category)}</small></span>
+        <span class="suggestion-macros">${item.calories} cal · ${item.proteinGrams}g protein</span>
+      </li>`;
+    }
+    const icon = suggestion.type === "restaurant"
+      ? `<span class="mini-logo ${RESTAURANTS[suggestion.id].className}" aria-hidden="true">${RESTAURANTS[suggestion.id].logo}</span>`
+      : '<span class="suggestion-icon" aria-hidden="true">⌕</span>';
+    const count = suggestion.type === "restaurant" ? `<span class="suggestion-macros">${suggestion.count} items</span>` : "";
+    return `<li role="option" id="suggestion-${index}" class="suggestion suggestion-${suggestion.type}" data-index="${index}" aria-selected="false">
+      ${icon}<span class="suggestion-text"><strong>${escapeHtml(suggestion.label)}</strong></span>${count}
+    </li>`;
+  }).join("");
+  suggestionsList.hidden = false;
+  searchInput.setAttribute("aria-expanded", "true");
+}
+
+function closeSuggestions() {
+  suggestionsList.hidden = true;
+  activeSuggestion = -1;
+  searchInput.setAttribute("aria-expanded", "false");
+  searchInput.removeAttribute("aria-activedescendant");
+}
+
+function highlightSuggestion(index) {
+  const options = [...suggestionsList.querySelectorAll(".suggestion")];
+  if (!options.length) return;
+  activeSuggestion = (index + options.length) % options.length;
+  options.forEach((option, i) => option.setAttribute("aria-selected", String(i === activeSuggestion)));
+  searchInput.setAttribute("aria-activedescendant", options[activeSuggestion].id);
+  options[activeSuggestion].scrollIntoView({ block: "nearest" });
+}
+
+function chooseSuggestion(index) {
+  const suggestion = currentSuggestions[index];
+  if (!suggestion) return;
+  closeSuggestions();
+  if (suggestion.type === "item") {
+    openItem(suggestion.item.uid);
+    return;
+  }
+  if (suggestion.type === "restaurant") {
+    const restaurantName = RESTAURANTS[suggestion.id].name;
+    searchInput.value = suggestion.text ? `${restaurantName} ${suggestion.text}` : restaurantName;
+  }
+  submitSearch(searchInput.value);
+}
+
+searchInput.setAttribute("role", "combobox");
+searchInput.setAttribute("aria-autocomplete", "list");
+searchInput.setAttribute("aria-controls", "search-suggestions");
+searchInput.setAttribute("aria-expanded", "false");
+
+searchInput.addEventListener("input", () => {
+  window.clearTimeout(suggestTimer);
+  suggestTimer = window.setTimeout(renderSuggestions, 90);
+});
+
+searchInput.addEventListener("keydown", (event) => {
+  if (suggestionsList.hidden) {
+    if (event.key === "ArrowDown" && searchInput.value.trim()) {
+      event.preventDefault();
+      renderSuggestions();
+      highlightSuggestion(0);
+    }
+    return;
+  }
+  if (event.key === "ArrowDown") { event.preventDefault(); highlightSuggestion(activeSuggestion + 1); }
+  if (event.key === "ArrowUp") { event.preventDefault(); highlightSuggestion(activeSuggestion - 1); }
+  if (event.key === "Escape") { event.preventDefault(); closeSuggestions(); }
+  if (event.key === "Enter" && activeSuggestion >= 0) {
+    event.preventDefault();
+    chooseSuggestion(activeSuggestion);
+  }
+});
+
+searchInput.addEventListener("focus", () => {
+  if (searchInput.value.trim()) renderSuggestions();
+});
+
+// mousedown (not click) so the choice lands before the input loses focus.
+suggestionsList.addEventListener("mousedown", (event) => {
+  const option = event.target.closest(".suggestion");
+  if (!option) return;
+  event.preventDefault();
+  chooseSuggestion(Number(option.dataset.index));
+});
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest("#restaurant-search")) closeSuggestions();
+});
+
 // ---------------------------------------------------------------------- Init
 
 sortBy.innerHTML = Object.entries(SORTS).map(([value, sort]) => `<option value="${value}">${sort.label}</option>`).join("");
 sortBy.value = state.sort;
 renderStats();
 renderRecommendations();
+// Opening a saved or shared results link goes straight to that list.
+if (readStateFromUrl()) showResults({ push: false });
