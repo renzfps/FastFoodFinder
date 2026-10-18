@@ -54,6 +54,19 @@ const recommendationImages = {
   "cmg-steak-tacos-3-crispy": "https://www.chipotle.com/content/dam/chipotle/menu-item-campaigns/high-protein/2025/lp-pces/updated-final-specs/1608x1068%20Mobile%20LP%20%20LP%20Abodo%20Chicken%20Taco.png"
 };
 
+// Per-photo framing so photos from different restaurants look like one set.
+// - ratio: the photo's width / height, so the frame hugs the photo and "clip" lines up with it.
+// - clip: cuts away the nutrition text Chipotle prints in the top-right of its photos.
+// - studio: Taco Bell photos sit on a light gray backdrop; this brightens it to white and fades the edges.
+// - zoom: scales the food so it fills the card about as much as the other photos.
+const CHIPOTLE_TEXT_CLIP = "polygon(0 0, 70% 0, 70% 31%, 100% 31%, 100% 100%, 0 100%)";
+const recommendationImageFit = {
+  "cmg-high-protein-low-calorie-bowl": { ratio: "1608 / 1068", clip: CHIPOTLE_TEXT_CLIP, zoom: 1.08 },
+  "cmg-steak-tacos-3-crispy": { ratio: "1608 / 1068", clip: CHIPOTLE_TEXT_CLIP.replaceAll("70%", "64%"), zoom: 1.08 },
+  "tb-3-cheese-chicken-flatbread-melt": { studio: true, zoom: 0.92 },
+  "tb-breakfast-quesadilla-steak": { studio: true, zoom: 0.92 }
+};
+
 // ------------------------------------------------------------------ Data layer
 
 function loadMenu() {
@@ -245,6 +258,15 @@ function renderStats() {
   $("#stat-restaurants").textContent = Object.keys(restaurantMeta).length;
 }
 
+function imageFitStyle(itemId) {
+  const fit = recommendationImageFit[itemId];
+  if (!fit) return "";
+  const styles = [`--photo-zoom: ${fit.zoom ?? 1}`];
+  if (fit.ratio) styles.push("width: auto", "max-width: 100%", `aspect-ratio: ${fit.ratio}`);
+  if (fit.clip) styles.push(`clip-path: ${fit.clip}`);
+  return `${fit.studio ? ' class="studio-photo"' : ""} style="${styles.join("; ")}"`;
+}
+
 function renderRecommendations() {
   const perRestaurant = {};
   const picks = sortItems(menuItems.filter((item) => (
@@ -262,7 +284,7 @@ function renderRecommendations() {
     <article class="recommendation-card" data-uid="${escapeHtml(item.uid)}" tabindex="0" role="button" aria-label="View nutrition for ${escapeHtml(item.name)}">
       <div class="recommendation-image${callout}${image ? "" : ` placeholder-image ${restaurant.className}-tint`}">
         ${image
-          ? `<img src="${image}" alt="${escapeHtml(item.name)}" loading="lazy" decoding="async" />`
+          ? `<img src="${image}" alt="${escapeHtml(item.name)}" loading="lazy" decoding="async"${imageFitStyle(item.id)} />`
           : `<span class="placeholder-logo ${restaurant.className}" aria-hidden="true">${restaurant.logo}</span>`}
         <div class="recommendation-protein-badge"><span>Protein</span><strong>${item.proteinGrams}g</strong></div>
       </div>
