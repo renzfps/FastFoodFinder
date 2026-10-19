@@ -57,7 +57,7 @@ The `.js` copy registers the same object on `window.FASTFOODFINDER_DATA["<restau
 
 ## Data sources
 
-- **McDonald's**: the official McDonald's nutrition calculator (September 2026 snapshot).
+- **McDonald's**: the official McDonald's nutrition calculator.
 - **Chipotle**: Chipotle's official US nutrition facts PDF. Bowls, burritos, tacos, salads and quesadillas are standard builds summed from the official per-ingredient values. The High Protein Menu builds match the totals Chipotle publishes.
 - **Taco Bell**: item names and calories from tacobell.com. Protein, carbs and fat come from FatSecret's Taco Bell listing, kept only where its calories match tacobell.com.
 
